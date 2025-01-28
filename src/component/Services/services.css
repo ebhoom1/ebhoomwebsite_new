@@ -1,0 +1,156 @@
+.services-head1 {
+    color: #162328;
+    font-family: "Euclid Circular B";
+    font-size: 40px;
+    font-weight: 600;
+  }
+  
+  .text-blue {
+    color: #236a80;
+  }
+  .text-bold{
+    font-weight: bold;
+  }
+  .wms-desc {
+    color: #162328;
+    font-family: "Euclid Circular B";
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .wms-head {
+    color: #236a80;
+    font-family: "Euclid Circular B";
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  .wms-head2 {
+    color: #162328;
+    font-family: "Euclid Circular B";
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  .input-field {
+    background-color: #ebebeb;
+    border: none;
+    height: 40px;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: "Euclid Circular B";
+    padding: 5px 30px;
+  }
+  
+  .demo-button {
+    background-color: #3fc060;
+    padding: 5px 10px;
+    border: none;
+    height: 40px;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: "Euclid Circular B";
+  }
+  .demo-button:hover {
+    background-color: #37a553;
+  }
+  
+  .services-head {
+    color: #162328;
+    font-family: "Euclid Circular B";
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .services-desc {
+    color: #162328;
+    font-family: "Euclid Circular B";
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .service-card {
+    height: auto;
+  }
+  
+  .services-head3 {
+    color: #162328;
+    font-family: "Euclid Circular B";
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  
+  .steps{
+   margin-left: 100px;
+  }
+  
+  .accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+  .accordion-item {
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  .accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+  }
+  .accordion-item-header.active::after {
+    content: "\2212";
+  }
+  .accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #236a80, transparent) 1;
+  }
+  
+  @media(max-width:767px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  .learn-more-button-service {
+    padding: 5px 50px;
+    color: #162328;
+    border: 1px solid #162328;
+    border-radius: 50px;
+    background-color: transparent;
+    font-size: 14px;
+    font-family: "Euclid Circular B";
+    margin-bottom: 25px;
+   
+  }
+  .learn-more-button-service:hover {
+    background-color: #162328;
+    color: #ffffff;
+    box-shadow: 0 0 2em #236a805b;
+  
+  }
+  .img-ocemsCalibration{
+    width: 30%;
+   
+  }
