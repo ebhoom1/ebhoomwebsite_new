@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Products = () => {
   const multiparameter = [
     {
@@ -106,7 +105,7 @@ const Products = () => {
   ];
   return (
     <div>
-      <div className="relative min-h-screen flex items-center justify-center ">
+      <div className="relative  h-[80vh] sm:h-[100vh] flex items-center justify-center ">
         {/* Custom Background */}
         <div
           className="absolute inset-0"
@@ -183,8 +182,8 @@ const Products = () => {
         </div>
       </div>
 
-      {/*Feature section */}
-      <div className="relative max-w-7xl mx-auto py-10">
+      {/* Feature section */}
+      <div className="relative max-w-7xl mx-auto py-10 px-4">
         {/* Heading */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
@@ -192,13 +191,13 @@ const Products = () => {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-secondary to-primary mx-auto mt-2 rounded"></div>
         </div>
-        {/* SVG Dotted Path */}
+
+        {/* SVG Dotted Path (Hidden on Small Screens) */}
         <svg
-          className="absolute w-full h-full"
+          className="absolute w-full h-full hidden md:block"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
-          {/* Curved Path for First and Second Row */}
           <path
             d="M50,100 C200,50 400,150 600,100 S900,50 1100,100 
          M50,300 C200,250 400,350 600,300 S900,250 1100,300"
@@ -209,8 +208,8 @@ const Products = () => {
           />
         </svg>
 
-        {/* Circles in Two Rows */}
-        <div className="grid grid-cols-4 gap-y-16 gap-x-10 justify-items-center ">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 justify-items-center">
           {[
             {
               icon: "assets/images/icon/wifi3.png",
@@ -268,6 +267,7 @@ const Products = () => {
           ))}
         </div>
       </div>
+
       <div className="py-20"></div>
       {/*video section */}
       <div className="relative bg-gray-900 py-16 lg:py-24">
@@ -828,7 +828,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-<div className="py-20"></div>
+      <div className="py-20"></div>
       <div className="container mx-auto px-4 space-y-8">
         {/* Section Heading */}
         <div className="text-center" data-aos="zoom-in">

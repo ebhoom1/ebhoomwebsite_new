@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Corrected imports
 import { motion, useAnimation, useInView } from "framer-motion";
 import naturegif from "../../assets/images/nature-unscreen.gif";
 import Eicon from "../../assets/images/android-chrome-512x512.png";
@@ -60,16 +62,16 @@ const Home = () => {
 
         {/* Glassmorphism Effect */}
         <div
-          className="absolute top-1/4 left-1/4 w-80 h-80 bg-white bg-opacity-20 backdrop-blur-lg rounded-2xl shadow-lg -rotate-12"
+          className="absolute top-1/4 left-1/4 w-64 sm:w-80 h-64 sm:h-80 bg-white bg-opacity-20 backdrop-blur-lg rounded-2xl shadow-lg -rotate-12"
           style={{ transform: "rotate(-10deg)" }}
         ></div>
         <div
-          className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-white bg-opacity-20 backdrop-blur-lg rounded-2xl shadow-lg rotate-6"
+          className="absolute bottom-1/4 right-1/4 w-56 sm:w-72 h-56 sm:h-72 bg-white bg-opacity-20 backdrop-blur-lg rounded-2xl shadow-lg rotate-6"
           style={{ transform: "rotate(10deg)" }}
         ></div>
 
         {/* Hero Content */}
-        <div className="container mx-auto px-8 flex flex-col lg:flex-row items-center justify-between relative z-10">
+        <div className="container mx-auto px-4 sm:px-8 flex flex-col lg:flex-row items-center justify-between relative z-10">
           {/* Left Column */}
           <motion.div
             className="w-full lg:w-1/2 text-center lg:text-left"
@@ -77,7 +79,7 @@ const Home = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
           >
-            <h1 className="text-5xl lg:text-6xl font-bold leading-snug text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-snug text-white">
               <span className="block mb-3">Monitor</span>
               <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-white">
                 Measure
@@ -89,13 +91,13 @@ const Home = () => {
                 Make a Difference
               </span>
             </h1>
-            <p className="text-lg text-gray-200 mt-4">
+            <p className="text-base sm:text-lg text-gray-200 mt-4">
               Join the revolution of monitoring and managing our planet’s health
               with advanced technology.
             </p>
             <button
               onClick={() => window.open("https://ocems.ebhoom.com", "_blank")}
-              className="mt-6 px-8 py-4 bg-white text-secondary font-bold rounded-full shadow-lg hover:bg-gray-200 transition-all"
+              className="mt-6 px-6 sm:px-8 py-3 sm:py-4 bg-white text-secondary font-bold rounded-full shadow-lg hover:bg-gray-200 transition-all"
             >
               Learn More
             </button>
@@ -103,7 +105,7 @@ const Home = () => {
 
           {/* Right Column - Image */}
           <motion.div
-            className="w-full lg:w-1/2 flex justify-center"
+            className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeInOut" }}
@@ -111,11 +113,12 @@ const Home = () => {
             <img
               src={naturegif}
               alt="Nature GIF"
-              className="max-w-xl rounded-b-lg shadow-lg"
+              className="max-w-xs sm:max-w-md lg:max-w-xl rounded-b-lg shadow-lg"
             />
           </motion.div>
         </div>
       </div>
+
       <div className="py-10"></div>
       {/* Animated Section */}
       {/*  Section 1*/}
@@ -177,9 +180,12 @@ const Home = () => {
                 Interactive monitoring application suits all pollution
                 monitoring devices.
               </p>
-              <button className="px-6 py-3 text-white bg-secondary hover:bg-blue-600 rounded-md shadow-md transition-all duration-300">
+              <NavLink
+                to="/contact"
+                className="px-6 py-3 text-white bg-secondary hover:bg-blue-600 rounded-md shadow-md transition-all duration-300"
+              >
                 Contact Us
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -225,54 +231,53 @@ const Home = () => {
           {/* Background Circle Design */}
           <div className="absolute  top-20 left-1/4 w-48 h-48 rounded-full bg-gradient-to-r from-green-300 to-green-400 opacity-40 animate-zoomInOut -z-10"></div>
           {/*three pic sec */}
-          <div className="relative w-full ">
-            <div className="relative container mx-auto  flex justify-center items-center ">
+          <div className="relative w-full max-w-md mx-auto">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              spaceBetween={20}
+              slidesPerView={1}
+              className="w-full"
+            >
               {/* Image 1 */}
-              <div
-                className="img-sec absolute bg-white rounded-lg shadow-lg overflow-hidden w-[300px] h-[200px] lg:w-[350px] lg:h-[250px]  transform -translate-y-20 z-20"
-                data-aos="fade-down"
-                data-aos-duration="800"
-              >
-                <img
-                  src={device_1}
-                  alt="Device 1"
-                  className="w-full h-full object-cover"
+              <SwiperSlide>
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px]">
+                  <img
+                    src={device_1}
+                    alt="Device 1"
+                    className="w-full h-full object-cover"
                   />
-              </div>
+                </div>
+              </SwiperSlide>
 
               {/* Image 2 */}
-              <div
-                className="img-sec relative top-40 left-60 bg-white rounded-lg shadow-lg overflow-hidden w-[300px] h-[200px] lg:w-[350px] lg:h-[250px]  transform -translate-x-40 z-30"
-                data-aos="fade-right"
-                data-aos-duration="800"
-                data-aos-delay="200"
-              >
-                <img
-                  src={device_2}
-                  alt="Device 2"
-                  className="w-full h-full object-cover"
+              <SwiperSlide>
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px]">
+                  <img
+                    src={device_2}
+                    alt="Device 2"
+                    className="w-full h-full object-cover"
                   />
-              </div>
+                </div>
+              </SwiperSlide>
 
               {/* Image 3 */}
-              <div
-                className="img3-sec absolute top-24 left-40 bg-white rounded-lg shadow-lg overflow-hidden w-[300px] h-[200px] lg:w-[350px] lg:h-[250px] transform translate-x-40 z-10"
-                data-aos="fade-left"
-                data-aos-duration="800"
-                data-aos-delay="400"
-              >
-                <img
-                  src={device_3}
-                  alt="Device 3"
-                  className="w-full h-full object-cover"
-
-                />
-              </div>
-            </div>
+              <SwiperSlide>
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px]">
+                  <img
+                    src={device_3}
+                    alt="Device 3"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </section>
-      <div className="py-20"></div>
+      <div className="py-10"></div>
 
       {/**section 3 */}
       {/** Section 3 */}
@@ -327,15 +332,15 @@ const Home = () => {
                 <img
                   src="https://images.unsplash.com/photo-1526529613260-5f7cad1eb4b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                   alt="Office View 2"
-                  className="w-full h-[200px] md:h-[300px] object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
               <div className="overflow-hidden rounded-lg shadow-lg">
                 <img
-                  src="/assets/images/grid3img.jpg"                
+                  src="/assets/images/grid3img.jpg"
                   alt="Office View 3"
-                  className="w-full h-[200px] md:h-[300px] object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -385,12 +390,12 @@ const Home = () => {
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        viewport={{ amount: 0.2 }} // Triggers when 20% of the section is visible
-        exit={{ opacity: 0, y: 100 }} // Resets animation when leaving the viewport
-        className="bg-gradient-to-r from-gray-100 to-gray-300 py-16"
+        viewport={{ amount: 0.2 }}
+        exit={{ opacity: 0, y: 100 }}
+        className="bg-gradient-to-r from-gray-100 to-gray-300 py-10 md:py-16"
       >
-        <div className="container mx-auto px-4 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-80 items-center">
+        <div className="container mx-auto px-4 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Left Section */}
             <div className="flex flex-col justify-center items-start">
               {/* Icon and Heading Row */}
@@ -418,13 +423,13 @@ const Home = () => {
                   <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z" />
                   <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z" />
                 </svg>
-                <h3 className="text-2xl font-extrabold text-gray-800 leading-snug">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-extrabold text-gray-800 leading-snug">
                   Our Expertise in Environmental Technology
                 </h3>
               </div>
 
               {/* Description with Circles */}
-              <div className="flex flex-nowrap gap-6 overflow-x-auto gap-4 mt-4 ">
+              <div className="flex flex-wrap gap-6 mt-4 justify-center">
                 {[
                   {
                     text: "Environmental Software Solutions",
@@ -439,9 +444,9 @@ const Home = () => {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className={`flex items-center justify-center w-36 h-36 rounded-full ${item.color} shadow-lg mb-2`}
+                    className={`flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36 rounded-full ${item.color} shadow-lg`}
                   >
-                    <p className="text-center font-medium text-gray-600 px-4">
+                    <p className="text-center text-sm sm:text-base font-medium text-gray-600 px-4">
                       {item.text}
                     </p>
                   </div>
@@ -450,24 +455,24 @@ const Home = () => {
             </div>
 
             {/* Right Section */}
-            <div className="flex flex-col justify-center items-center  ">
-              <h3 className="text-lg font-medium text-gray-600 mb-4">
+            <div className="flex flex-col justify-center items-center">
+              <h3 className="text-base sm:text-lg font-medium text-gray-800 mb-8">
                 Proud Member of
               </h3>
               {/* Logo Grid */}
-              <div className="flex gap-8">
-                <div className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center">
+                <div className="bg-white w-28 h-28 sm:w-32 sm:h-32 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center">
                   <img
                     src={startupindia}
                     alt="Startup India"
-                    className="w-32 h-auto"
+                    className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
                   />
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <div className="bg-white w-28 h-28 sm:w-32 sm:h-32 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center">
                   <img
                     src={startupmission}
                     alt="Kerala Startup Mission"
-                    className="w-32 h-auto"
+                    className="w-20 h-20 sm:w-24 sm:h-24 object-cover"
                   />
                 </div>
               </div>
@@ -475,6 +480,7 @@ const Home = () => {
           </div>
         </div>
       </motion.div>
+
       <div className="py-20"></div>
       {/*sectio 6 youtube video */}
       <section className="bg-gray-50 py-10">
@@ -526,33 +532,34 @@ const Home = () => {
 
       <div className="py-20"></div>
       {/*section 7 client */}
-      <section className=" py-12">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-6">
-            <h3 className="text-3xl font-bold text-gray-800">Our Clients</h3>
-          </div>
+      <section className="py-12 overflow-hidden">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-6">
+      <h3 className="text-3xl font-bold text-gray-800">Our Clients</h3>
+    </div>
 
-          {/* Scrolling Logos */}
-          <div className="overflow-hidden">
-            <div className="flex py-4 gap-6 animate-scroll">
-              {/* Duplicated logos for seamless scrolling */}
-              {[...logos, ...logos].map((logo, idx) => (
-                <div
-                  key={idx}
-                  className="flex justify-center items-center bg-white shadow-md rounded-lg p-4 w-36 h-36"
-                >
-                  <img
-                    className="w-full h-full object-contain"
-                    src={`assets/clients/${logo}.png`}
-                    alt={`Client ${logo}`}
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
+    {/* Scrolling Logos */}
+    <div className="relative w-full overflow-hidden">
+      <div className="flex py-4 gap-6 animate-scroll whitespace-nowrap">
+        {[...logos, ...logos].map((logo, idx) => (
+          <div
+            key={idx}
+            className="flex justify-center items-center bg-white shadow-md rounded-lg p-4 
+            w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 flex-shrink-0"
+          >
+            <img
+              className="w-full h-full object-contain"
+              src={`assets/clients/${logo}.png`}
+              alt={`Client ${logo}`}
+              loading="lazy"
+            />
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
       <div className="mb-20"></div>
     </div>
   );

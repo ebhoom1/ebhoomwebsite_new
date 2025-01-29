@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./services.css";
 import { FiPlus, FiMinus } from "react-icons/fi";
@@ -8,8 +8,8 @@ const Services = () => {
   // State for tracking active accordion (NEW)
   const [activeAccordion, setActiveAccordion] = useState(null);
 
-   // Function to toggle accordion (NEW)
-   const toggleAccordion = (index) => {
+  // Function to toggle accordion (NEW)
+  const toggleAccordion = (index) => {
     setActiveAccordion(activeAccordion === index ? null : index);
   };
 
@@ -144,7 +144,6 @@ const Services = () => {
     };
   }, []);
 
-
   return (
     <div>
       <div className="py-10"></div>
@@ -172,16 +171,17 @@ const Services = () => {
               <p className="text-gray-600 mb-6">
                 Get started with trial MODEL today
               </p>
-              <div className="flex items-center space-x-4 mb-4">
+              <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-4 sm:space-y-0 mb-4">
                 <input
                   type="text"
-                  className="px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 flex-grow"
+                  className="px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 w-full sm:flex-grow"
                   placeholder="Your Email address"
                 />
-                <button className="px-6 py-2 bg-secondary text-white rounded-lg hover:bg-secondary transition">
+                <button className="px-4 py-2 lg:py-1.5 bg-secondary text-white rounded-lg hover:bg-secondary transition w-auto">
                   Request Demo
                 </button>
               </div>
+
               <p className="text-gray-600">
                 Already using our service?{" "}
                 <a
@@ -589,53 +589,54 @@ const Services = () => {
         </section>
 
         {/*step 2 end */}
-{/**Continuous Validation of OCEMS  */}
-<div id="right_3" className="container mx-auto px-4 py-10">
-  <div className="flex flex-wrap lg:flex-nowrap items-center gap-6">
-    {/* Content Section */}
-    <div
-      className="w-full lg:w-1/2 flex flex-col mb-6 lg:mb-0"
-      data-aos="fade-up"
-    >
-      <h5 className="text-xl font-bold text-gray-800 mb-4">
-        Continuous Validation of OCEMS
-      </h5>
-      <p className="text-gray-700 mb-4">
-        The purpose of this exercise is to check the validity of earlier
-        calibration and collection of validated calibration data points for
-        better matrix matching and to authenticate the range of measurement
-        coverage. Frequency of continuous validation by plant operators should
-        be once in 15 (Fifteen) days. The data collected should also be shared
-        through email to CPCB, SPCB/PCCs.
-      </p>
-      <p className="text-gray-700 mb-4">
-        <span className="font-bold mr-4">Function 1:</span> OCEMS Function check
-        as above (as per technology used) to be performed once in fifteen days
-        or fortnightly basis.
-      </p>
-      <p className="text-gray-700">
-        <span className="font-bold mr-4">Function 2:</span> OCEMS Validation
-        through routine calibration library generation, to be performed once in
-        fifteen days or fortnightly basis.
-      </p>
-    </div>
+        {/**Continuous Validation of OCEMS  */}
+        <div id="right_3" className="container mx-auto px-4 py-10">
+          <div className="flex flex-wrap lg:flex-nowrap items-center gap-6">
+            {/* Content Section */}
+            <div
+              className="w-full lg:w-1/2 flex flex-col mb-6 lg:mb-0"
+              data-aos="fade-up"
+            >
+              <h5 className="text-xl font-bold text-gray-800 mb-4">
+                Continuous Validation of OCEMS
+              </h5>
+              <p className="text-gray-700 mb-4">
+                The purpose of this exercise is to check the validity of earlier
+                calibration and collection of validated calibration data points
+                for better matrix matching and to authenticate the range of
+                measurement coverage. Frequency of continuous validation by
+                plant operators should be once in 15 (Fifteen) days. The data
+                collected should also be shared through email to CPCB,
+                SPCB/PCCs.
+              </p>
+              <p className="text-gray-700 mb-4">
+                <span className="font-bold mr-4">Function 1:</span> OCEMS
+                Function check as above (as per technology used) to be performed
+                once in fifteen days or fortnightly basis.
+              </p>
+              <p className="text-gray-700">
+                <span className="font-bold mr-4">Function 2:</span> OCEMS
+                Validation through routine calibration library generation, to be
+                performed once in fifteen days or fortnightly basis.
+              </p>
+            </div>
 
-    {/* Image Section */}
-    <div
-      className="w-full lg:w-1/2 flex justify-center"
-      data-aos="fade-down"
-    >
-      <img
-        src="/assets/images/Ebhoom/3.jpg"
-        alt="Ocems Calibration"
-        className="w-full max-w-lg "
-        loading="lazy"
-      />
-    </div>
-  </div>
-</div>
+            {/* Image Section */}
+            <div
+              className="w-full lg:w-1/2 flex justify-center"
+              data-aos="fade-down"
+            >
+              <img
+                src="/assets/images/Ebhoom/3.jpg"
+                alt="Ocems Calibration"
+                className="w-full max-w-lg "
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
 
-{/**step 3 start */}
+        {/**step 3 start */}
         <div className="container mx-auto px-4 py-10">
           <div className="accordion-item bg-white shadow-md rounded-md mb-4 px-4">
             <div className="accordion-item-header p-4 font-semibold text-lg cursor-pointer">

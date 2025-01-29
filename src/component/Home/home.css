@@ -9,17 +9,34 @@
     animation: scroll 20s linear infinite;
   }
 
-  
+  /* Change the color of the right arrow */
+.swiper-button-next {
+  color: #bbbcbd; /* Gray color */
+  font-size: 12px; /* Reduce arrow size */
+
+}
+
+/* Change the color of the left arrow */
+.swiper-button-prev {
+  color: #bbbcbd; /* Gray color */
+  font-size: 12px; /* Reduce arrow size */
+
+}
 
   @media (max-width: 640px) {
     .content-b-image{
-      margin-top: 45px;
+     padding-top: 88px;
+    }
+    .animate-scroll {
+      animation-duration: 8s; /* Faster on small screens */
     }
   }
-  
+
   /* Media query: Medium devices (768px) */
   @media (min-width: 641px) and (max-width: 768px) {
-   
+    .animate-scroll {
+      animation-duration: 8s; /* Faster on small screens */
+    }
   }
   
   /* Media query: Large devices (1024px) */

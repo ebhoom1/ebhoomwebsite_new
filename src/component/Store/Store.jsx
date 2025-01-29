@@ -11,13 +11,13 @@ const Store = () => {
       {/* Hero Section */}
       <div className="relative bg-green-50 h-[600px] flex items-center justify-center">
         <div className="absolute top-30 right-60 transform -translate-x-1/2 -translate-y-16 rotate-12 z-0">
-          <div className="w-[150px] h-[150px] bg-blue-200 rounded-md opacity-30"></div>
+          <div className="w-[150px] h-[150px] bg-blue-300 rounded-md opacity-30"></div>
         </div>
         <div className="absolute top-80 right-20 transform -translate-x-1/2 -translate-y-16 rotate-12 z-0">
-          <div className="w-[50px] h-[50px] bg-blue-200 rounded-md opacity-30"></div>
+          <div className="w-[50px] h-[50px] bg-blue-300 rounded-md opacity-30"></div>
         </div>
         <div className="absolute top-50 left-60 transform -translate-x-1/2 -translate-y-16 -rotate-6 z-0">
-          <div className="w-[300px] h-[300px] bg-indigo-100 rounded-md opacity-50"></div>
+          <div className="w-[300px] h-[300px] bg-indigo-300 rounded-md opacity-30"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center text-gray-600">
           <h2 className="text-3xl lg:text-5xl font-bold mb-4" data-aos="zoom-in">
