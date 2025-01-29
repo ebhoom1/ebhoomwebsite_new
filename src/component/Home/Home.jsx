@@ -7,7 +7,6 @@ import device_2 from "../../assets/images/device_2.jpg";
 import device_3 from "../../assets/images/device_3.jpg";
 import mobileapp from "../../assets/images/mobile app.png";
 import background_sec4 from "../../assets/images/background_sec4.jpg";
-import imgsec4 from "../../assets/images/pexels-tomfisk-5123351.jpeg";
 import startupindia from "../../assets/images/Startup India.svg";
 import startupmission from "../../assets/images/kerala-startup-mission.svg";
 import "./home.css";
@@ -162,7 +161,7 @@ const Home = () => {
             </div>
 
             {/* Text and Button */}
-            <div className="lg:w-1/2 flex flex-col justify-center items-center text-center">
+            <div className="content-b-image lg:w-1/2 flex flex-col justify-center items-center text-center">
               <h4 className="text-2xl md:text-3xl font-semibold mb-4">
                 What if every drop, every watt,{" "}
                 <span className="text-secondary">
@@ -227,12 +226,10 @@ const Home = () => {
           <div className="absolute  top-20 left-1/4 w-48 h-48 rounded-full bg-gradient-to-r from-green-300 to-green-400 opacity-40 animate-zoomInOut -z-10"></div>
           {/*three pic sec */}
           <div className="relative w-full ">
-            {/* Styled Background */}
-
             <div className="relative container mx-auto  flex justify-center items-center ">
               {/* Image 1 */}
               <div
-                className="absolute bg-white rounded-lg shadow-lg overflow-hidden w-[300px] h-[200px] lg:w-[350px] lg:h-[250px] transform -translate-y-20 z-20"
+                className="img-sec absolute bg-white rounded-lg shadow-lg overflow-hidden w-[300px] h-[200px] lg:w-[350px] lg:h-[250px]  transform -translate-y-20 z-20"
                 data-aos="fade-down"
                 data-aos-duration="800"
               >
@@ -240,12 +237,12 @@ const Home = () => {
                   src={device_1}
                   alt="Device 1"
                   className="w-full h-full object-cover"
-                />
+                  />
               </div>
 
               {/* Image 2 */}
               <div
-                className="relative top-40 left-60 bg-white rounded-lg shadow-lg overflow-hidden w-[300px] h-[200px] lg:w-[350px] lg:h-[250px] transform -translate-x-40 z-30"
+                className="img-sec relative top-40 left-60 bg-white rounded-lg shadow-lg overflow-hidden w-[300px] h-[200px] lg:w-[350px] lg:h-[250px]  transform -translate-x-40 z-30"
                 data-aos="fade-right"
                 data-aos-duration="800"
                 data-aos-delay="200"
@@ -254,12 +251,12 @@ const Home = () => {
                   src={device_2}
                   alt="Device 2"
                   className="w-full h-full object-cover"
-                />
+                  />
               </div>
 
               {/* Image 3 */}
               <div
-                className="absolute top-24 left-40 bg-white rounded-lg shadow-lg overflow-hidden w-[300px] h-[200px] lg:w-[350px] lg:h-[250px] transform translate-x-40 z-10"
+                className="img3-sec absolute top-24 left-40 bg-white rounded-lg shadow-lg overflow-hidden w-[300px] h-[200px] lg:w-[350px] lg:h-[250px] transform translate-x-40 z-10"
                 data-aos="fade-left"
                 data-aos-duration="800"
                 data-aos-delay="400"
@@ -268,6 +265,7 @@ const Home = () => {
                   src={device_3}
                   alt="Device 3"
                   className="w-full h-full object-cover"
+
                 />
               </div>
             </div>
@@ -335,7 +333,7 @@ const Home = () => {
 
               <div className="overflow-hidden rounded-lg shadow-lg">
                 <img
-                  src={imgsec4}
+                  src='/assets/images/pexels-tomfisk-5123351.jpeg'
                   alt="Office View 3"
                   className="w-full h-[200px] md:h-[300px] object-cover"
                 />
