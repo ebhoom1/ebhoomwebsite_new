@@ -333,7 +333,7 @@ const Home = () => {
 
               <div className="overflow-hidden rounded-lg shadow-lg">
                 <img
-                  src="/assets/images/grid3img.jpeg"                
+                  src="/assets/images/grid3img.jpg"                
                   alt="Office View 3"
                   className="w-full h-[200px] md:h-[300px] object-cover"
                 />
