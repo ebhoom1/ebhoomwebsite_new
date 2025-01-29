@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import ScrollToTop from "./component/ScrollTo Top/ScrollToTop";
 import Home from "./component/Home/Home";
 import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
@@ -34,6 +35,8 @@ function App() {
     <div className="App flex flex-col min-h-screen">
       <Header />
       <div className="content flex-grow   ">
+      <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

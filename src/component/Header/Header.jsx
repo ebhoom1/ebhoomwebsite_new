@@ -372,6 +372,8 @@ const Header = () => {
              } font-normal text-[16px]`
            }
               to="/"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+
             >
               Home
             </NavLink>
@@ -389,6 +391,8 @@ const Header = () => {
               }
               to="/about"
               title="About Ebhoom Kochi"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+
             >
               About
             </NavLink>
@@ -406,6 +410,8 @@ const Header = () => {
               }
               to="/services"
               title="View our Services"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+
             >
               Services
             </NavLink>
@@ -423,6 +429,8 @@ const Header = () => {
               }
               to="/products"
               title="View our product catalog"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+
             >
               Products
             </NavLink>
@@ -439,6 +447,8 @@ const Header = () => {
                 } font-normal text-[16px]`
               }
               to="/store"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+
             >
               Store{" "}
               <sup>
@@ -461,6 +471,8 @@ const Header = () => {
               }
               to="/blog"
               title="View our blogs"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+
             >
               Blog
             </NavLink>
@@ -477,6 +489,8 @@ const Header = () => {
                 } font-normal text-[16px]`
               }
               to="/tpds"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+
             >
               TPDS
             </NavLink>
@@ -494,6 +508,8 @@ const Header = () => {
               }
               to="/careers"
               title="Check out our careers"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+
             >
               Careers
             </NavLink>
@@ -511,6 +527,7 @@ const Header = () => {
               }
               to="/contact"
               title="Contact us"
+              onClick={() => setMenuOpen(false)} // Close menu on click
             >
               Contact Us
             </NavLink>

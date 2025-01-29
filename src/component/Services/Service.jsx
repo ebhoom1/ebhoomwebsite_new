@@ -303,7 +303,7 @@ const Services = () => {
           </h3>
 
           {/* Button */}
-          <NavLink to="tel:8086704092" target="_blank">
+          <NavLink to="/contact" target="">
             <button
               className="bg-secondary text-white py-3 px-6 rounded-full shadow-md hover:bg-gray-800 hover:text-white hover:shadow-lg transition duration-300 transform hover:scale-105"
               type="button"
