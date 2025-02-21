@@ -41,7 +41,7 @@ const Home = () => {
     }
   }, [scrollPosition, controls]);
 
-  const logos = [1, 2, 3, 4, 5, 6]; // Replace with your actual number of logos
+  const logos = [1, 2, 3, 4, 5, 6,7,8]; // Replace with your actual number of logos
 
   return (
     <div className="min-h-screen">
