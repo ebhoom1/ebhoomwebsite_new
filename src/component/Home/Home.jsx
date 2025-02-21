@@ -15,33 +15,33 @@ import "./home.css";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
-  const controls = useAnimation();
-  const [scrollPosition, setScrollPosition] = useState(0);
+  // const controls = useAnimation();
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
-  const handleScroll = () => {
-    const position = window.scrollY; // Get current scroll position
-    setScrollPosition(position); // Update state
-  };
+  // const handleScroll = () => {
+  //   const position = window.scrollY; // Get current scroll position
+  //   setScrollPosition(position); // Update state
+  // };
 
-  useEffect(() => {
-    // Add scroll listener
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      // Clean up listener on unmount
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   // Add scroll listener
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     // Clean up listener on unmount
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    // Trigger animation based on scroll position
-    if (scrollPosition > 300 && scrollPosition < 1000) {
-      controls.start({ y: 0, opacity: 1 });
-    } else {
-      controls.start({ y: -200, opacity: 0 });
-    }
-  }, [scrollPosition, controls]);
+  // useEffect(() => {
+  //   // Trigger animation based on scroll position
+  //   if (scrollPosition > 300 && scrollPosition < 1000) {
+  //     controls.start({ y: 0, opacity: 1 });
+  //   } else {
+  //     controls.start({ y: -200, opacity: 0 });
+  //   }
+  // }, [scrollPosition, controls]);
 
-  const logos = [1, 2, 3, 4, 5, 6, 7]; // Replace with your actual number of logos
+  const logos = [1, 2, 3, 4, 5, 6]; // Replace with your actual number of logos
 
   return (
     <div className="min-h-screen">
@@ -144,7 +144,6 @@ const Home = () => {
                 }}
                 transition={{
                   duration: 3,
-                  repeat: Infinity,
                   ease: "easeInOut",
                 }}
               ></motion.div>
@@ -155,7 +154,7 @@ const Home = () => {
                 className="w-[450px] h-auto relative z-10 rounded-lg shadow-lg"
                 alt="Mobile App"
                 initial={{ y: -100, opacity: 0 }}
-                animate={controls}
+                // animate={controls}
                 transition={{
                   duration: 1,
                   ease: "easeInOut",

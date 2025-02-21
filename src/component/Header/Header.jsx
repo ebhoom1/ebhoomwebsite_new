@@ -494,6 +494,43 @@ const Header = () => {
             >
               TPDS
             </NavLink>
+            {/* <NavLink
+              className={({ isActive }) =>
+                ` ${
+                  isActive
+                    ? isScrolled
+                      ? "text-white"
+                      : "text-secondary"
+                    : isScrolled
+                    ? "text-white"
+                    : "text-gray-700"
+                } font-normal text-[16px]`
+              }
+              to="/tpds"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+
+            >
+              Good Foot
+            </NavLink> */}
+            {/* <NavLink
+              className={({ isActive }) =>
+                ` ${
+                  isActive
+                    ? isScrolled
+                      ? "text-white"
+                      : "text-secondary"
+                    : isScrolled
+                    ? "text-white"
+                    : "text-gray-700"
+                } font-normal text-[16px]`
+              }
+              to="/esg"
+              title="Check out our careers"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+
+            >
+              ESG
+            </NavLink> */}
             <NavLink
               className={({ isActive }) =>
                 ` ${

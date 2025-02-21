@@ -15,6 +15,7 @@ import Store from './component/Store/Store';
 import Tpds from "./component/TPDS/Tpds";
 import Subscription from "./component/Subscription/SubscriptionForm";
 import Services from './component/Services/Service';
+import ESG from './component/ESG/ESG';
 import BlogList from './component/Blog/BogList';
 import BlogContent1 from "./component/Blog/BlogContent1";
 import BlogContent2 from "./component/Blog/BlogContent2";
@@ -27,7 +28,7 @@ import BlogContent8 from "./component/Blog/BlogContent8";
 import BlogContent9 from "./component/Blog/BlogContent9";
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1000,once:true, });
   }, []);
   return (
     <>
@@ -47,6 +48,7 @@ function App() {
           <Route path="/tpds" element={<Tpds />} />
           <Route path="/subscriptionform" element={<Subscription />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/esg" element={<ESG />} />
 
 
           <Route path="/blog" element={<BlogList />} />
