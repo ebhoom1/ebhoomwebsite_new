@@ -13,33 +13,30 @@ import startupindia from "../../assets/images/Startup India.svg";
 import startupmission from "../../assets/images/kerala-startup-mission.svg";
 import "./home.css";
 import { NavLink } from "react-router-dom";
+import SustainabilitySection from "./SustainabilitySection";
 
 const Home = () => {
   const controls = useAnimation();
   const [scrollPosition, setScrollPosition] = useState(0);
-
+  const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has played
+  
   const handleScroll = () => {
-    const position = window.scrollY; // Get current scroll position
-    setScrollPosition(position); // Update state
+    const position = window.scrollY;
+    setScrollPosition(position);
   };
-
+  
   useEffect(() => {
-    // Add scroll listener
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      // Clean up listener on unmount
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  
   useEffect(() => {
-    // Trigger animation based on scroll position
-    if (scrollPosition > 300 && scrollPosition < 1000) {
+    if (!hasAnimated && scrollPosition > 300) {
       controls.start({ y: 0, opacity: 1 });
-    } else {
-      controls.start({ y: -200, opacity: 0 });
+      setHasAnimated(true); // Prevent re-triggering
     }
-  }, [scrollPosition, controls]);
+  }, [scrollPosition, controls, hasAnimated]);
+  
 
   const logos = [1, 2, 3, 4, 5, 6,7,8]; // Replace with your actual number of logos
 
@@ -382,8 +379,10 @@ const Home = () => {
         </div>
       </div>
       <div className="py-10"></div>
+{/**sustainability section */}
+<SustainabilitySection/>
+<div className="py-10"></div>
 
-      {/*section 5*/}
       {/* Section 5 */}
       <motion.div
         initial={{ opacity: 0, y: 100 }}

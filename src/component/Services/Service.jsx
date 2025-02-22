@@ -273,7 +273,7 @@ const Services = () => {
             {/* Description Paragraph 1 */}
             <p
               className="text-lg font-normal text-gray-700 mb-4 max-w-4xl"
-              data-aos="fade-up"
+             
             >
               EBHOOM is a real-time Pollution monitoring system that can help
               you comply with the CPCB regulations. The data from EBHOOM can be
@@ -282,7 +282,7 @@ const Services = () => {
             </p>
 
             {/* Description Paragraph 2 */}
-            <p className="text-lg text-gray-700 max-w-4xl" data-aos="fade-up">
+            <p className="text-lg text-gray-700 max-w-4xl" >
               Easy to use and maintain. Compliant with CPCB and SPCB
               regulations. Helps to improve water quality management. Reduces
               the risk of pollution.

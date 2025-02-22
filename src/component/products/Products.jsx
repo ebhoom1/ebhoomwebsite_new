@@ -686,7 +686,7 @@ const Products = () => {
               />
             </div>
             {/* Table: Right */}
-            <div className="w-full md:w-1/2" data-aos="zoom-out">
+            <div className="w-full md:w-1/2" >
               <table className="w-full border-collapse border border-gray-300 rounded-lg shadow-md">
                 <thead>
                   <tr className="bg-gray-200 text-left text-gray-800">
@@ -722,7 +722,7 @@ const Products = () => {
           </div>
           <div className="flex flex-wrap md:flex-nowrap items-center gap-8">
             {/* Table: Left */}
-            <div className="w-full md:w-1/2" data-aos="zoom-out">
+            <div className="w-full md:w-1/2" >
               <table className="w-full border-collapse border border-gray-300 rounded-lg shadow-md">
                 <thead>
                   <tr className="bg-gray-200 text-left text-gray-800">
@@ -772,7 +772,7 @@ const Products = () => {
               />
             </div>
             {/* Table: Right */}
-            <div className="w-full md:w-1/2" data-aos="zoom-out">
+            <div className="w-full md:w-1/2" >
               <table className="w-full border-collapse border border-gray-300 rounded-lg shadow-md">
                 <thead>
                   <tr className="bg-gray-200 text-left text-gray-800">
@@ -842,7 +842,7 @@ const Products = () => {
           {/* Instruction List */}
           <div
             className="w-full md:w-2/3 lg:w-1/2 bg-indigo p-6 rounded-lg shadow-lg bg-indigo-100"
-            data-aos="zoom-in"
+           
           >
             <ol className="space-y-4 text-gray-700 text-base leading-relaxed">
               <li className="flex items-start space-x-2">
