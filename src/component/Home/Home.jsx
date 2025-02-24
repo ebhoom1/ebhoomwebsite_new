@@ -19,26 +19,25 @@ const Home = () => {
   const controls = useAnimation();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has played
-  
+
   const handleScroll = () => {
     const position = window.scrollY;
     setScrollPosition(position);
   };
-  
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   useEffect(() => {
     if (!hasAnimated && scrollPosition > 300) {
       controls.start({ y: 0, opacity: 1 });
       setHasAnimated(true); // Prevent re-triggering
     }
   }, [scrollPosition, controls, hasAnimated]);
-  
 
-  const logos = [1, 2, 3, 4, 5, 6,7,8]; // Replace with your actual number of logos
+  const logos = [1, 2, 3, 4, 5, 6, 7, 8]; // Replace with your actual number of logos
 
   return (
     <div className="min-h-screen">
@@ -379,9 +378,9 @@ const Home = () => {
         </div>
       </div>
       <div className="py-10"></div>
-{/**sustainability section */}
-<SustainabilitySection/>
-<div className="py-10"></div>
+      {/**sustainability section */}
+      <SustainabilitySection />
+      <div className="py-10"></div>
 
       {/* Section 5 */}
       <motion.div
@@ -530,7 +529,35 @@ const Home = () => {
 
       <div className="py-20"></div>
       {/*section 7 client */}
-      <section className="py-12 overflow-hidden">
+      {/* <section className="py-12 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-6">
+            <h3 className="text-3xl font-bold text-gray-800">Our Clients</h3>
+          </div>
+
+          <div className="relative w-full overflow-hidden">
+            <div className="flex py-4 gap-6 animate-scroll whitespace-nowrap">
+              {[...logos, ...logos].map((logo, idx) => (
+                <div
+                  key={idx}
+                  className="flex justify-center items-center bg-white shadow-md rounded-lg p-4 
+            w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 flex-shrink-0"
+                >
+                  <img
+                    className="w-full h-full object-contain"
+                    src={`assets/clients/${logo}.png`}
+                    alt={`Client ${logo}`}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Client Section */}
+<section className="py-12 overflow-hidden">
   <div className="container mx-auto px-4">
     <div className="text-center mb-6">
       <h3 className="text-3xl font-bold text-gray-800">Our Clients</h3>
@@ -538,12 +565,12 @@ const Home = () => {
 
     {/* Scrolling Logos */}
     <div className="relative w-full overflow-hidden">
-      <div className="flex py-4 gap-6 animate-scroll whitespace-nowrap">
+      <div className="flex py-4 animate-scroll">
         {[...logos, ...logos].map((logo, idx) => (
           <div
             key={idx}
-            className="flex justify-center items-center bg-white shadow-md rounded-lg p-4 
-            w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 flex-shrink-0"
+            className="flex justify-center items-center bg-white shadow-md rounded-lg p-2 
+                      w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-56 lg:h-56 flex-shrink-0"
           >
             <img
               className="w-full h-full object-contain"
@@ -557,6 +584,7 @@ const Home = () => {
     </div>
   </div>
 </section>
+
 
       <div className="mb-20"></div>
     </div>

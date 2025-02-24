@@ -2,12 +2,19 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
+/* 
+  .animate-scroll {
+    display: flex;
+    width: 200%; 
+    animation: scroll 20s linear infinite;
+  } */
 
   .animate-scroll {
     display: flex;
-    width: 200%; /* Enough space for duplicate logos */
+    width: max-content; /* Adjusts width dynamically */
     animation: scroll 20s linear infinite;
-  }
+    gap: 1rem; /* Space between images */
+}
 
   /* Change the color of the right arrow */
 .swiper-button-next {
@@ -23,33 +30,15 @@
 
 }
 
-  @media (max-width: 640px) {
-    .content-b-image{
-     padding-top: 88px;
-    }
-    .animate-scroll {
-      animation-duration: 8s; /* Faster on small screens */
-    }
+@media (max-width: 640px) {
+  .content-b-image {
+    padding-top: 88px;
   }
+}
 
-  /* Media query: Medium devices (768px) */
-  @media (min-width: 641px) and (max-width: 768px) {
-    .animate-scroll {
-      animation-duration: 8s; /* Faster on small screens */
-    }
+/* Apply the same animation-duration for all screens up to 1024px */
+@media (max-width: 1024px) {
+  .animate-scroll {
+    animation-duration: 12s;
   }
-  
-  /* Media query: Large devices (1024px) */
-  @media (min-width: 769px) and (max-width: 1024px) {
-   
-  }
-  
-  /* Media query: Extra large devices (1280px) */
-  @media (min-width: 1025px) {
-   
-  }
-  
-  /* Media query: Super large screens (1536px) */
-  @media (min-width: 1281px) {
-    
-  }
+}
