@@ -1,10 +1,10 @@
-
-
-
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import headerLogo from "../../assets/images/logo.png";
+import goodfootlogo1 from "../../assets/images/goodfootlogo1.png";
+import goodfootlogo2 from "../../assets/images/goodfootlogo2.png";
+import goodfootlogo3 from "../../assets/images/goodfootlogo3.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,8 +29,6 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  
 
   return (
     <nav
@@ -103,20 +101,19 @@ const Header = () => {
             }`}
           >
             <NavLink
-             className={({ isActive }) =>
-             ` ${
-               isActive
-                 ? isScrolled
-                   ? "text-white"
-                   : "text-secondary"
-                 : isScrolled
-                 ? "text-white"
-                 : "text-gray-700"
-             } font-normal text-[16px]`
-           }
+              className={({ isActive }) =>
+                ` ${
+                  isActive
+                    ? isScrolled
+                      ? "text-white"
+                      : "text-secondary"
+                    : isScrolled
+                    ? "text-white"
+                    : "text-gray-700"
+                } font-normal text-[16px]`
+              }
               to="/"
               onClick={() => setMenuOpen(false)} // Close menu on click
-
             >
               Home
             </NavLink>
@@ -135,7 +132,6 @@ const Header = () => {
               to="/about"
               title="About Ebhoom Kochi"
               onClick={() => setMenuOpen(false)} // Close menu on click
-
             >
               About
             </NavLink>
@@ -154,7 +150,6 @@ const Header = () => {
               to="/services"
               title="View our Services"
               onClick={() => setMenuOpen(false)} // Close menu on click
-
             >
               Services
             </NavLink>
@@ -173,7 +168,6 @@ const Header = () => {
               to="/products"
               title="View our product catalog"
               onClick={() => setMenuOpen(false)} // Close menu on click
-
             >
               Products
             </NavLink>
@@ -191,7 +185,6 @@ const Header = () => {
               }
               to="/store"
               onClick={() => setMenuOpen(false)} // Close menu on click
-
             >
               Store{" "}
               <sup>
@@ -215,7 +208,6 @@ const Header = () => {
               to="/blog"
               title="View our blogs"
               onClick={() => setMenuOpen(false)} // Close menu on click
-
             >
               Blog
             </NavLink>
@@ -233,11 +225,10 @@ const Header = () => {
               }
               to="/tpds"
               onClick={() => setMenuOpen(false)} // Close menu on click
-
             >
               TPDS
             </NavLink>
-            <NavLink
+            {/* <NavLink
               className={({ isActive }) =>
                 ` ${
                   isActive
@@ -254,7 +245,38 @@ const Header = () => {
 
             >
               Good Foot
+            </NavLink> */}
+            <NavLink
+              className={({ isActive }) =>
+                ` ${
+                  isScrolled
+                    ? "text-white"
+                    : isActive
+                    ? "text-secondary"
+                    : "text-gray-700"
+                } font-normal text-[16px]`
+              }
+              to="/goodfoot"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+            >
+              {({ isActive }) => (
+                <img
+                  // src={isActive ? goodfootlogo3 : isScrolled ? goodfootlogo2 : goodfootlogo1}
+                  src={
+                    isActive
+                      ? isScrolled
+                        ? goodfootlogo2
+                        : goodfootlogo3
+                      : isScrolled
+                      ? goodfootlogo2
+                      : goodfootlogo1
+                  }
+                  alt="Good Foot Logo"
+                  className="h-6 w-auto"
+                />
+              )}
             </NavLink>
+
             <NavLink
               className={({ isActive }) =>
                 ` ${
@@ -270,7 +292,6 @@ const Header = () => {
               to="/esg"
               title="Check out our careers"
               onClick={() => setMenuOpen(false)} // Close menu on click
-
             >
               ESG
             </NavLink>
@@ -289,7 +310,6 @@ const Header = () => {
               to="/careers"
               title="Check out our careers"
               onClick={() => setMenuOpen(false)} // Close menu on click
-
             >
               Careers
             </NavLink>

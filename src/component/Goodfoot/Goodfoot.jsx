@@ -9,6 +9,8 @@ import socialhub from "../../assets/images/socialhub.png";
 import verify from "../../assets/images/verify.png";
 import ev from "../../assets/images/ev.png";
 import goodfootbgimage from "../../assets/images/goodfootbg.png";
+import goodfootlogotitle from "../../assets/images/goodfootlogotitle.png";
+
 import {
   FaRecycle,
   FaBicycle,
@@ -41,8 +43,20 @@ const GoodFoot = () => {
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-gray-700 leading-tight text-center lg:text-left" data-aos="fade-up" >
+            {/* <h1 className="text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-gray-700 leading-tight text-center lg:text-left" data-aos="fade-up" >
               GoodFoot: The App That Moves the World Forward
+            </h1> */}
+            {/* Title - Replace "GoodFoot" with Logo */}
+            <h1
+              className="text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-gray-700 leading-tight text-center lg:text-left"
+              data-aos="fade-up"
+            >
+              <img
+                src={goodfootlogotitle}
+                alt="GoodFoot Logo"
+                className="inline-block h-12 w-auto lg:h-16 "
+              />{" "}
+              : The App That Moves the World Forward
             </h1>
           </div>
 
@@ -110,8 +124,7 @@ const GoodFoot = () => {
       <section className="flex flex-wrap items-center justify-center py-12 px-8">
         {/* Left Side: Mobile Mockups */}
         <div className="relative w-full lg:w-3/5 flex justify-center">
-          <div className="relative w-64 sm:w-72 md:w-80 lg:w-96">          
-
+          <div className="relative w-64 sm:w-72 md:w-80 lg:w-96">
             {/* Center Mobile */}
             <img
               src={mobile1}
@@ -172,7 +185,7 @@ const GoodFoot = () => {
 
       {/* AI-Powered Features */}
       <section className="py-16 px-20 md:px-10 lg:px-20">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" >
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
           AI That Makes Green Living Second Nature
         </h2>
 

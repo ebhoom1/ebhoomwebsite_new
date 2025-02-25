@@ -34,11 +34,11 @@ const Contact = () => {
               Office Address
             </h3>
             <p className="text-gray-600">
-              EBHOOM SOLUTIONS LLP <br />
+            GoodFoot Sustainability Private Limited <br />
               Near Bharata Mata College, Thrikkakara P.O, Ernakulam-682021
             </p>
             <p className="text-gray-600 mt-4">
-              EBHOOM SOLUTIONS LLP <br />
+            GoodFoot Sustainability Private Limited <br />
               CUSAT, RISE TBI, University Road, South Kalamassery, Kochi,
               Kerala-682022
             </p>

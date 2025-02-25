@@ -15,9 +15,9 @@ const Footer = () => {
               <img src={headerLogo} alt="EBHOOM Solutions" className="w-24" />
             </div>
             <div className="ml-3 mt-3">
-              <h2 className="text-lg font-bold">EBHOOM SOLUTIONS LLP</h2>
+              <h2 className="text-lg font-bold">GoodFoot Sustainability Private Limited</h2>
               <p className="text-sm mt-2">
-                EBHOOM Solutions LLP specializes in innovative environmental
+              GoodFoot Sustainability Private Limited specializes in innovative environmental
                 technologies, offering pollution monitoring systems, energy
                 dashboards, water dashboards, and sustainable SaaS solutions for
                 industries worldwide.
@@ -67,7 +67,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-white pt-4">
           {/* Copyright */}
           <p className="text-center md:text-left mb-4 md:mb-0 text-sm">
-            © 2022 EBHOOM Solutions LLP | All rights reserved.
+            © 2022 GoodFoot Sustainability Private Limited | All rights reserved.
           </p>
 
           {/* Social Links */}
