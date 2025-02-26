@@ -1,60 +1,16 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "./tpds.css";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import { BiCheckCircle } from "react-icons/bi";
 import { FiCheckCircle } from "react-icons/fi";
 
 const Tdps = () => {
   useEffect(() => {
-    AOS.init({ duration: 2000, once: true });
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const subscriptionPlans = useMemo(
-    () => [
-      {
-        title: "Business Basic",
-        price: "₹2999",
-        details: [
-          "Water source and consumption data digitization",
-          "Alert and alarm Management",
-          "Regulatory compliances",
-          "24*5 Email and Phone Support",
-        ],
-        users: "1 user per org",
-        instruments: "5 field instruments per facility",
-      },
-      {
-        title: "Business Standard",
-        price: "₹5999",
-        details: [
-          "Water quality management",
-          "APIs based data sources",
-          "Advanced water data dashboards",
-          "Regulatory documents management",
-          "Water analytics including water neutrality",
-          "Data availability reports",
-          "User and Role management",
-        ],
-        users: "2 users per org",
-        instruments: "15 field instruments per facility",
-      },
-      {
-        title: "Business Premium",
-        price: "₹9999",
-        details: [
-          "Support for SCADA, BMS, DCS, and OT integrations",
-          "Escalation Engine for alerts",
-          "Maintenance mode and data correction workflows",
-          "Dedicated customer success manager",
-        ],
-        users: "5 users per org",
-        instruments: "30 field instruments per facility",
-      },
-    ],
-    []
-  );
+ 
 
   return (
     <>
@@ -135,51 +91,7 @@ const Tdps = () => {
         </div>
       </section>
 
-      {/* Subscription Plans */}
-      <section className=" py-12 px-20">
-        <div className="container ">
-          <h3 className="text-2xl font-semibold text-center text-gray-700 mb-8">
-            Subscription Plans
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {subscriptionPlans.map((plan, index) => (
-              <div
-                key={index}
-                className="bg-white border border-[#034737] shadow-lg rounded-lg p-6 text-center"
-                data-aos="fade-up"
-              >
-                <h4 className="text-2xl font-bold text-[#034737] mb-4">
-                  {plan.title}
-                </h4>
-                <p className="text-2xl font-semibold text-gray-800 mb-4">
-                  {plan.price}
-                </p>
-                <p className="text-gray-600 mb-6">
-                  Per month, billed annually
-                  <br />
-                  {plan.users}
-                  <br />
-                  <span className="block">{plan.instruments}</span>
-                </p>
-                <Link
-                  to="/subscriptionform"
-                  className="block bg-white border border-[#034737] text-[#034737] py-2 px-6 rounded-lg hover:bg-green-700 hover:text-white transition duration-300"
-                >
-                  Get Started
-                </Link>
-                <ul className="text-left mt-6 space-y-3">
-                  {plan.details.map((detail, i) => (
-                    <li key={i} className="flex items-center text-gray-700">
-                      <BiCheckCircle className="text-[#034737] mr-2" />
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       {/** */}
       <section id="products" className="py-16 ">
