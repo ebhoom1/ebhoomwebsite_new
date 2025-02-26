@@ -18,6 +18,7 @@ import Services from './component/Services/Service';
 import ESG from './component/ESG/ESG';
 import GoodFoot from "./component/Goodfoot/Goodfoot";
 import BlogList from './component/Blog/BogList';
+import SubscriptionPage from "./component/Pricing/Pricing";
 import BlogContent1 from "./component/Blog/BlogContent1";
 import BlogContent2 from "./component/Blog/BlogContent2";
 import BlogContent3 from "./component/Blog/BlogContent3";
@@ -51,6 +52,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/esg" element={<ESG />} />
           <Route path="/goodfoot" element={<GoodFoot />} />
+          <Route path="/pricing" element={<SubscriptionPage />} />
 
 
           <Route path="/blog" element={<BlogList />} />

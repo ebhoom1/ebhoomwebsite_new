@@ -1,4 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Corrected imports
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -16,26 +19,36 @@ import { NavLink } from "react-router-dom";
 import SustainabilitySection from "./SustainabilitySection";
 
 const Home = () => {
-  const controls = useAnimation();
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has played
+  const navigate=useNavigate();
+  // const controls = useAnimation();
+  // const [scrollPosition, setScrollPosition] = useState(0);
+  // const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has played
 
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setScrollPosition(position);
-  };
+  // const handleScroll = () => {
+  //   const position = window.scrollY;
+  //   setScrollPosition(position);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
+  // useEffect(() => {
+  //   if (!hasAnimated && scrollPosition > 300) {
+  //     controls.start({ y: 0, opacity: 1 });
+  //     setHasAnimated(true); // Prevent re-triggering
+  //   }
+  // }, [scrollPosition, controls, hasAnimated]);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation happens only once
+      easing: "ease-in-out",
+    });
   }, []);
-
-  useEffect(() => {
-    if (!hasAnimated && scrollPosition > 300) {
-      controls.start({ y: 0, opacity: 1 });
-      setHasAnimated(true); // Prevent re-triggering
-    }
-  }, [scrollPosition, controls, hasAnimated]);
+  
 
   const logos = [1, 2, 3, 4, 5, 6, 7, 8]; // Replace with your actual number of logos
 
@@ -116,6 +129,10 @@ const Home = () => {
       </div>
 
       <div className="py-10"></div>
+      {/**sustainability section */}
+      <SustainabilitySection />
+      <div className="py-10"></div>
+
       {/* Animated Section */}
       {/*  Section 1*/}
       <section className="relative bg-[#f7fdfc] py-20 z-10 overflow-hidden">
@@ -149,12 +166,13 @@ const Home = () => {
                 src={mobileapp}
                 className="w-[450px] h-auto relative z-10 rounded-lg shadow-lg"
                 alt="Mobile App"
-                initial={{ y: -100, opacity: 0 }}
-                animate={controls}
-                transition={{
-                  duration: 1,
-                  ease: "easeInOut",
-                }}
+                // initial={{ y: -100, opacity: 0 }}
+                // animate={controls}
+                // transition={{
+                //   duration: 1,
+                //   ease: "easeInOut",
+                // }}
+                data-aos="fade-down"
               />
             </div>
 
@@ -271,6 +289,7 @@ const Home = () => {
             </Swiper>
           </div>
         </div>
+       
       </section>
       <div className="py-10"></div>
 
@@ -315,9 +334,8 @@ const Home = () => {
         </div>
       </section>
       <div className="py-10"></div>
-      {/*section 4 */}
       {/* Section 4 */}
-      <div className="py-12 bg-gray-50">
+      <div className=" bg-gray-50">
         <div className="container mx-auto px-4">
           {/* Two-Column Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -377,9 +395,27 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="py-10"></div>
-      {/**sustainability section */}
-      <SustainabilitySection />
+      {/* Footer CTA Section with Modern Clip Path */}
+      <section className=" px-6 md:px-6 lg:px-20">
+
+      <div
+        className="relative mt-20 bg-green-800 text-white py-12 px-6 md:px-12 lg:px-20 flex flex-col items-center justify-center text-center"
+        style={{
+          clipPath:
+            "polygon(0 10%, 25% 5%, 50% 10%, 75% 5%, 100% 10%, 100% 90%, 75% 95%, 50% 90%, 25% 95%, 0 90%)",
+        }}
+      >
+        <h3 className="text-3xl font-bold">
+          The Future is Green. The Future is EBHOOM.
+        </h3>
+        <button
+          onClick={() => navigate("/contact")}
+          className="mt-6 bg-white text-green-700 px-8 py-3 rounded-lg font-medium text-lg hover:bg-green-700 hover:text-white transition shadow-lg"
+        >
+          Join Us
+        </button>
+      </div>
+      </section>
       <div className="py-10"></div>
 
       {/* Section 5 */}
@@ -478,7 +514,7 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <div className="py-20"></div>
+      <div className="py-10"></div>
       {/*sectio 6 youtube video */}
       <section className="bg-gray-50 py-10">
         <div className="container mx-auto px-4">
@@ -527,21 +563,23 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="py-20"></div>
-      {/*section 7 client */}
-      {/* <section className="py-12 overflow-hidden">
+      <div className="py-10"></div>
+     
+      {/* Client Section */}
+      <section className="py-12 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-6">
             <h3 className="text-3xl font-bold text-gray-800">Our Clients</h3>
           </div>
 
+          {/* Scrolling Logos */}
           <div className="relative w-full overflow-hidden">
-            <div className="flex py-4 gap-6 animate-scroll whitespace-nowrap">
+            <div className="flex py-4 animate-scroll">
               {[...logos, ...logos].map((logo, idx) => (
                 <div
                   key={idx}
-                  className="flex justify-center items-center bg-white shadow-md rounded-lg p-4 
-            w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 flex-shrink-0"
+                  className="flex justify-center items-center bg-white shadow-md rounded-lg p-2 
+                      w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-56 lg:h-56 flex-shrink-0"
                 >
                   <img
                     className="w-full h-full object-contain"
@@ -554,37 +592,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section> */}
-
-      {/* Client Section */}
-<section className="py-12 overflow-hidden">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-6">
-      <h3 className="text-3xl font-bold text-gray-800">Our Clients</h3>
-    </div>
-
-    {/* Scrolling Logos */}
-    <div className="relative w-full overflow-hidden">
-      <div className="flex py-4 animate-scroll">
-        {[...logos, ...logos].map((logo, idx) => (
-          <div
-            key={idx}
-            className="flex justify-center items-center bg-white shadow-md rounded-lg p-2 
-                      w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-56 lg:h-56 flex-shrink-0"
-          >
-            <img
-              className="w-full h-full object-contain"
-              src={`assets/clients/${logo}.png`}
-              alt={`Client ${logo}`}
-              loading="lazy"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       <div className="mb-20"></div>
     </div>

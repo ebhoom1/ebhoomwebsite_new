@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { FaLeaf, FaChartLine } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import goodfootlogo1 from "../../assets/images/goodfootlogo1.png";
 
 const SustainabilitySection = () => {
   const navigate = useNavigate(); // React Router navigation
@@ -49,9 +50,11 @@ const SustainabilitySection = () => {
         <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
           <div className="p-6 text-center border-l-4 border-[#236a80]">
             <FaLeaf className="text-[#236a80] text-3xl mx-auto" />
-            <h4 className="text-xl font-semibold mt-4 text-[#236a80]">
-              GoodFoot: Sustainability, Simplified.
-            </h4>
+            <h4 className="text-xl sm:text-xl font-semibold mt-4 text-[#236a80] flex items-center justify-center flex-wrap text-center">
+  <img src={goodfootlogo1} alt="GoodFoot Logo" className="h-8 sm:h-8 mr-2" />
+  <span className="whitespace-nowrap">:</span><span className="whitespace-nowrap">Sustainability, Simplified.</span>
+</h4>
+
             <p className="text-gray-700 mt-2">
               Track your carbon footprint, join AI-verified eco-challenges, rent
               EVs, shop in our eco-friendly marketplace, and earn rewards for
@@ -65,26 +68,7 @@ const SustainabilitySection = () => {
             </Link>
           </div>
         </div>
-      </div>
-
-      {/* Footer CTA Section with Modern Clip Path */}
-      <div
-        className="relative mt-20 bg-green-800 text-white py-12 px-6 md:px-12 lg:px-20 flex flex-col items-center justify-center text-center"
-        style={{
-          clipPath:
-            "polygon(0 10%, 25% 5%, 50% 10%, 75% 5%, 100% 10%, 100% 90%, 75% 95%, 50% 90%, 25% 95%, 0 90%)",
-        }}
-      >
-        <h3 className="text-3xl font-bold">
-          The Future is Green. The Future is EBHOOM.
-        </h3>
-        <button
-          onClick={() => navigate("/contact")}
-          className="mt-6 bg-white text-green-700 px-8 py-3 rounded-lg font-medium text-lg hover:bg-green-700 hover:text-white transition shadow-lg"
-        >
-          Join Us
-        </button>
-      </div>
+      </div>    
     </section>
   );
 };

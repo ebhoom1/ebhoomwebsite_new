@@ -307,6 +307,24 @@ const Header = () => {
                     : "text-gray-700"
                 } font-normal text-[16px]`
               }
+              to="/pricing"
+              title="Check out our careers"
+              onClick={() => setMenuOpen(false)} // Close menu on click
+            >
+             Pricing
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                ` ${
+                  isActive
+                    ? isScrolled
+                      ? "text-white"
+                      : "text-secondary"
+                    : isScrolled
+                    ? "text-white"
+                    : "text-gray-700"
+                } font-normal text-[16px]`
+              }
               to="/careers"
               title="Check out our careers"
               onClick={() => setMenuOpen(false)} // Close menu on click
@@ -329,7 +347,7 @@ const Header = () => {
               title="Contact us"
               onClick={() => setMenuOpen(false)} // Close menu on click
             >
-              Contact Us
+              Contact
             </NavLink>
           </div>
         </div>
