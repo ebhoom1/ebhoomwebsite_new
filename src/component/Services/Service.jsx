@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./services.css";
 import { FiPlus, FiMinus } from "react-icons/fi";
+import emsscrn1 from "../../assets/images/emsscrn1.png";
+import emsscrn2 from "../../assets/images/emsscrn2.png";
 
 const Services = () => {
   // State for tracking active accordion (NEW)
@@ -243,16 +245,17 @@ const Services = () => {
               className="text-2xl font-semibold text-gray-600 mb-4 max-w-3xl leading-snug"
               data-aos="fade-down"
             >
-              Connect any emission monitoring systems of Air, Water & Noise to{" "}
-              <span className="font-extrabold text-secondary">EBHOOM</span>{" "}
+              Connect any systems of air, water, noise & energy to{" "}
+              <span className="font-extrabold text-secondary">EBHOOM EMS</span>{" "}
               application
             </h4>
             {/* Decorative Icons */}
             <div className="flex flex-wrap justify-center items-center mt-12 gap-6 mb-10">
               {/* Icon Cards */}
               {[
-                { icon: "💧", label: "Water Monitoring" },
                 { icon: "🌬️", label: "Air Quality" },
+                { icon: "💧", label: "Water Monitoring" },
+                { icon: "⚡", label: "Energy" },
                 { icon: "🔊", label: "Noise Levels" },
                 { icon: "📊", label: "Real-time Reporting" },
                 { icon: "✅", label: "CPCB Compliant" },
@@ -271,10 +274,7 @@ const Services = () => {
               ))}
             </div>
             {/* Description Paragraph 1 */}
-            <p
-              className="text-lg font-normal text-gray-700 mb-4 max-w-4xl"
-             
-            >
+            <p className="text-lg font-normal text-gray-700 mb-4 max-w-4xl">
               EBHOOM is a real-time Pollution monitoring system that can help
               you comply with the CPCB regulations. The data from EBHOOM can be
               submitted to the KSPCB in real time, which will help you to meet
@@ -282,16 +282,33 @@ const Services = () => {
             </p>
 
             {/* Description Paragraph 2 */}
-            <p className="text-lg text-gray-700 max-w-4xl" >
+            <p className="text-lg text-gray-700 max-w-4xl">
               Easy to use and maintain. Compliant with CPCB and SPCB
               regulations. Helps to improve water quality management. Reduces
               the risk of pollution.
             </p>
+            {/* Images Section */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+              <div className="overflow-hidden " data-aos="fade-up">
+                <img
+                  src={emsscrn1}
+                  alt="EMS Screen 1"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="overflow-hidden " data-aos="fade-up">
+                <img
+                  src={emsscrn2}
+                  alt="EMS Screen 2"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
       {/* <div className="py-10"></div> */}
-      <div className="flex items-center justify-center ">
+      <div className="flex items-center justify-center mt-8">
         <div
           className="w-3/4  flex flex-col items-center justify-center text-center py-16 bg-blue-100  shadow-lg rounded-xl"
           data-aos="zoom-in"
@@ -381,16 +398,16 @@ const Services = () => {
           </div>
 
           {/* Second Row */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-16">
+          <div className="items-center mt-16">
             {/* Left Image */}
-            <div data-aos="fade-up">
+            {/* <div data-aos="fade-up">
               <img
                 src="/assets/images/Ebhoom/6.png"
                 alt="OCEMS"
                 className="rounded-lg shadow-md"
                 loading="lazy"
               />
-            </div>
+            </div> */}
 
             {/* Right Content */}
             <div data-aos="fade-down">
@@ -416,7 +433,7 @@ const Services = () => {
           </div>
 
           {/* Third Row */}
-          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="mt-16  items-center">
             {/* Left Content */}
             <div className="text-left" data-aos="fade-up">
               <h5 className="text-2xl font-bold text-gray-800 mb-4">
@@ -459,7 +476,7 @@ const Services = () => {
             </div>
 
             {/* Right Image */}
-            <div className="flex justify-center" data-aos="fade-down">
+            {/* <div className="flex justify-center" data-aos="fade-down">
               <div className="relative aspect-w-16 aspect-h-9 mt-5">
                 <img
                   src="/assets/images/Ebhoom/8.png"
@@ -468,7 +485,7 @@ const Services = () => {
                   loading="lazy"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -501,24 +518,24 @@ const Services = () => {
         <div id="left_2" className="container mx-auto px-4 py-10">
           <div className="flex flex-wrap lg:flex-nowrap items-center gap-6">
             {/* Image Section */}
-            <div className="w-full lg:w-1/2" data-aos="fade-up">
+            {/* <div className="w-full lg:w-1/2" data-aos="fade-up">
               <img
                 src="/assets/images/Ebhoom/16.png"
                 className="w-full rounded-md shadow-lg"
                 alt="OCEMS image"
                 loading="lazy"
               />
-            </div>
+            </div> */}
 
             {/* Content Section */}
             <div
-              className="w-full lg:w-1/2 flex flex-col justify-center"
+              className="w-full  justify-center"
               data-aos="fade-down"
             >
               <h5 className="text-xl font-bold text-gray-800 mb-4">
                 Basic Installation and Calibration of OCEMS
               </h5>
-              <p className="text-gray-600">
+              <p className="text-black text-lg ">
                 The purpose of this exercise is to ensure installation of the
                 system in a plant and collect calibration data points for better
                 matrix matching and to authenticate the range of measurement
@@ -591,16 +608,16 @@ const Services = () => {
         {/*step 2 end */}
         {/**Continuous Validation of OCEMS  */}
         <div id="right_3" className="container mx-auto px-4 py-10">
-          <div className="flex flex-wrap lg:flex-nowrap items-center gap-6">
+          <div className="items-center ">
             {/* Content Section */}
             <div
-              className="w-full lg:w-1/2 flex flex-col mb-6 lg:mb-0"
+              className="w-full  mb-6 lg:mb-0"
               data-aos="fade-up"
             >
               <h5 className="text-xl font-bold text-gray-800 mb-4">
                 Continuous Validation of OCEMS
               </h5>
-              <p className="text-gray-700 mb-4">
+              <p className="text-black text-lg mb-4">
                 The purpose of this exercise is to check the validity of earlier
                 calibration and collection of validated calibration data points
                 for better matrix matching and to authenticate the range of
@@ -609,12 +626,12 @@ const Services = () => {
                 collected should also be shared through email to CPCB,
                 SPCB/PCCs.
               </p>
-              <p className="text-gray-700 mb-4">
+              <p className="text-black mb-4">
                 <span className="font-bold mr-4">Function 1:</span> OCEMS
                 Function check as above (as per technology used) to be performed
                 once in fifteen days or fortnightly basis.
               </p>
-              <p className="text-gray-700">
+              <p className="text-black">
                 <span className="font-bold mr-4">Function 2:</span> OCEMS
                 Validation through routine calibration library generation, to be
                 performed once in fifteen days or fortnightly basis.
@@ -622,7 +639,7 @@ const Services = () => {
             </div>
 
             {/* Image Section */}
-            <div
+            {/* <div
               className="w-full lg:w-1/2 flex justify-center"
               data-aos="fade-down"
             >
@@ -632,7 +649,7 @@ const Services = () => {
                 className="w-full max-w-lg "
                 loading="lazy"
               />
-            </div>
+            </div> */}
           </div>
         </div>
 

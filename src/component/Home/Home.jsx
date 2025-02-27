@@ -187,8 +187,7 @@ const Home = () => {
               </h4>
               <p className="text-gray-700 text-lg mb-6">
                 We monitor ambient{" "}
-                <strong className="text-secondary">Air quality</strong>, Water
-                quality, Noise pollution and
+                air, water,energy, noise pollution and
                 <br />
                 Interactive monitoring application suits all pollution
                 monitoring devices.
