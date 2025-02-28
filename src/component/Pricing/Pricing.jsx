@@ -15,6 +15,7 @@ const SubscriptionPage = () => {
           "24*5 Email and Phone Support",
         ],
         users: "1 user per org",
+        parameter: "5 parameters",
         instruments: "5 field instruments per facility",
       },
       {
@@ -29,7 +30,8 @@ const SubscriptionPage = () => {
           "Data availability reports",
           "User and Role management",
         ],
-        users: "2 users per org",
+        users: "2 user per org",
+        parameter: "15 parameters",
         instruments: "15 field instruments per facility",
       },
       {
@@ -41,7 +43,8 @@ const SubscriptionPage = () => {
           "Maintenance mode and data correction workflows",
           "Dedicated customer success manager",
         ],
-        users: "5 users per org",
+        users: "5 user per org",
+        parameter: "30 parameters",
         instruments: "30 field instruments per facility",
       },
     ],
@@ -130,6 +133,12 @@ const SubscriptionPage = () => {
             Per month, billed annually
             <br />
             {plan.users}
+            {plan.parameter && (
+              <>
+                <br />
+                {plan.parameter}
+              </>
+            )}
           </p>
           <Link
             to="/subscriptionform"
@@ -153,27 +162,27 @@ const SubscriptionPage = () => {
   return (
     <div className="py-8 px-4 sm:px-6 md:px-20 mt-20">
       <div className="text-center mb-12">
-        <h1 className="text-3xl  font-bold text-[#034737] mb-4">Choose Your Subscription Plan</h1>
-        <p className="text-gray-600 md:text-lg">Flexible plans to meet your business needs</p>
+        <h1 className="text-3xl  font-bold text-[#034737] mb-4">
+          Choose Your Subscription Plan
+        </h1>
+        <p className="text-gray-600 md:text-lg">
+          Flexible plans to meet your business needs
+        </p>
       </div>
       <section className="mb-16">
         {/* <h4 className="text-lg md:text-xl font-semibold text-gray-800 mb-6 text-center">
           EMS Pricing
         </h4> */}
-         <div className="text-center mb-8">
-          <h2 className="text-xl  font-semibold text-gray-800">
-          EMS Pricing
-          </h2>
+        <div className="text-center mb-8">
+          <h2 className="text-xl  font-semibold text-gray-800">EMS Pricing</h2>
           <div className="w-16 h-1 bg-gradient-to-r from-secondary to-primary mx-auto  mt-2 rounded"></div>
         </div>
 
         {renderPlans(emsPlans)}
       </section>
       <section>
-      <div className="text-center mb-8">
-          <h2 className="text-xl  font-semibold text-gray-800">
-          ESG Pricing
-          </h2>
+        <div className="text-center mb-8">
+          <h2 className="text-xl  font-semibold text-gray-800">ESG Pricing</h2>
           <div className="w-16 h-1 bg-gradient-to-r from-secondary to-primary mx-auto  mt-2 rounded"></div>
         </div>
         {renderPlans(esgPlans)}
