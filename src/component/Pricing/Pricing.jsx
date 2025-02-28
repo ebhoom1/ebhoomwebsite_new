@@ -78,7 +78,7 @@ const SubscriptionPage = () => {
           "Automated regulatory compliance alerts",
           "Priority email & phone support",
         ],
-        users: "5 users per company",
+        users: "5 user per company",
       },
       {
         title: "ESG Premium",
@@ -93,7 +93,7 @@ const SubscriptionPage = () => {
           "Real-time compliance updates & risk forecasting",
           "Dedicated account manager & 24/7 support",
         ],
-        users: "15 users per company",
+        users: "15 user per company",
       },
       {
         title: "ESG Enterprise",
