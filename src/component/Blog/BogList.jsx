@@ -70,14 +70,14 @@ const blogPosts = [
     title: "ESG: The Future of Sustainable Business Practices",
     img: "/assets/images/esg.jpg",
     link: "/blog/esg",
-    date: "08/03/25",
+    date: "15/03/25",
     readTime: "5 minute read",
   },
   {
     title: "The Science Behind Carbon Emissions: How They Affect Our Planet",
     img: "/assets/images/carbon-emission.jpg",
     link: "/blog/carbon-emission",
-    date: "08/03/25",
+    date: "15/03/25",
     readTime: "4 minute read",
   },
 ];
