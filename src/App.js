@@ -28,6 +28,8 @@ import BlogContent6 from "./component/Blog/BlogContent6";
 import BlogContent7 from "./component/Blog/BlogContent7";
 import BlogContent8 from "./component/Blog/BlogContent8";
 import BlogContent9 from "./component/Blog/BlogContent9";
+import BlogContent10 from "./component/Blog/BlogContent10";
+import BlogContent11 from "./component/Blog/BlogContent11";
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000,once:true, });
@@ -65,6 +67,8 @@ function App() {
           <Route path="/blog/ocems" element={<BlogContent7 />} />
           <Route path="/blog/carbon-tracking" element={<BlogContent8 />} />
           <Route path="/blog/carbon-footprint" element={<BlogContent9 />} />
+          <Route path="/blog/esg" element={<BlogContent10 />} />
+          <Route path="/blog/carbon-emission" element={<BlogContent11 />} />
         </Routes>
       </div>
       <Footer />

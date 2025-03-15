@@ -1,8 +1,94 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./blog.css";
 
+const blogPosts = [
+  {
+    title: "Understanding OCEMS: The Future of Industrial Pollution Control",
+    img: "/assets/images/understandingOCEMS.jpg",
+    link: "/blog/understandingOCEMS",
+    date: "10/10/24",
+    readTime: "10 minute read",
+  },
+  {
+    title: "Industrial Effluent and Wastewater Dumping: The Periyar River Pollution Crisis",
+    img: "/assets/images/periyar.jpg",
+    link: "/blog/periyar-river",
+    date: "10/10/24",
+    readTime: "3 minute read",
+  },
+  {
+    title: "Water Crisis in Bangalore: How Water Treatment Solutions Can Prevent Future Shortages",
+    img: "/assets/images/banglore.jpg",
+    link: "/blog/water-crisis-banglore",
+    date: "10/10/24",
+    readTime: "10 minute read",
+  },
+  {
+    title: "Water Treatment Technologies for Residential Complexes: Lessons from Kakkanad Flats",
+    img: "/assets/images/kakkanad.jpg",
+    link: "/blog/kakkanad-lessons",
+    date: "10/10/24",
+    readTime: "5 minute read",
+  },
+  {
+    title: "Efficient Water Treatment Solutions for Industrial Wastewater Management",
+    img: "/assets/images/watermanagement.jpg",
+    link: "/blog/waste-management",
+    date: "10/10/24",
+    readTime: "5 minute read",
+  },
+  {
+    title: "A Step-by-Step Guide to Implementing OCEMS in Your Industry",
+    img: "/assets/images/ocems.jpg",
+    link: "/blog/couple-recycles-10000-tonnes-of-waste",
+    date: "11/10/24",
+    readTime: "3 minute read",
+  },
+  {
+    title: "5 Benefits of Installing OCEMS in Manufacturing Plants",
+    img: "/assets/images/ocemsbenefits.jpg",
+    link: "/blog/ocems",
+    date: "11/10/24",
+    readTime: "3 minute read",
+  },
+  {
+    title: "Carbon Emission Tracking: The Key to Reducing Your Industry’s Carbon Footprint",
+    img: "/assets/images/carbonfootprint.png",
+    link: "/blog/carbon-tracking",
+    date: "11/10/24",
+    readTime: "5 minute read",
+  },
+  {
+    title: "The Growing Carbon Footprint of Cities: How Urban Areas Can Reduce Emissions",
+    img: "/assets/images/carbonurban.jpg",
+    link: "/blog/carbon-footprint",
+    date: "11/10/24",
+    readTime: "3 minute read",
+  },
+  {
+    title: "ESG: The Future of Sustainable Business Practices",
+    img: "/assets/images/esg.jpg",
+    link: "/blog/esg",
+    date: "08/03/25",
+    readTime: "5 minute read",
+  },
+  {
+    title: "The Science Behind Carbon Emissions: How They Affect Our Planet",
+    img: "/assets/images/carbon-emission.jpg",
+    link: "/blog/carbon-emission",
+    date: "08/03/25",
+    readTime: "4 minute read",
+  },
+];
+
 const BlogList = () => {
+  const [visibleCount, setVisibleCount] = useState(6); // Show 6 blogs initially
+
+  const handleLoadMore = () => {
+    setVisibleCount((prevCount) => prevCount + 6);
+  };
+
   return (
     <div>
       <div className="py-6"></div>
@@ -28,417 +114,46 @@ const BlogList = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             data-aos="fade-up"
           >
-            {/* Card 1 */}
-            <Link to="/blog/understandingOCEMS" className="block">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition  h-full flex flex-col">
-                <img
-                  className="w-full h-48 object-cover"
-                  src="/assets/images/understandingOCEMS.jpg"
-                  alt="Understanding OCEMS"
-                />
-                <div className="p-4 flex-grow">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Understanding OCEMS: The Future of Industrial Pollution
-                    Control
-                  </h3>
-                  <div className="flex justify-between text-sm text-gray-600">
+            {blogPosts.slice(0, visibleCount).map((post, index) => (
+              <Link to={post.link} className="block" key={index}>
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition h-full flex flex-col">
+                  <img className="w-full h-48 object-cover" src={post.img} alt={post.title} />
+                  <div className="p-4 flex-grow">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      {post.title}
+                    </h3>
+                  </div>
+                  <div className="flex justify-between items-center text-sm text-gray-600 px-4 pb-4">
                     <span className="flex items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="13"
-                        height="13"
-                        fill="currentColor"
-                        className="mr-1"
-                        viewBox="0 0 16 16"
-                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" className="mr-1" viewBox="0 0 16 16">
                         <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                       </svg>
-                      10/10/24
+                      {post.date}
                     </span>
                     <span className="flex items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="13"
-                        height="13"
-                        fill="currentColor"
-                        className="mr-1"
-                        viewBox="0 0 16 16"
-                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" className="mr-1" viewBox="0 0 16 16">
                         <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
                       </svg>
-                      10 minute read
+                      {post.readTime}
                     </span>
                   </div>
                 </div>
-              </div>
-            </Link>
-
-            {/* Card 2 */}
-            <Link to="/blog/periyar-river" className="block">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition h-full flex flex-col">
-                <img
-                  className="w-full h-48 object-cover"
-                  src="/assets/images/periyar.jpg"
-                  alt="Periyar River"
-                />
-                <div className="p-4 flex-grow">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Industrial Effluent and Wastewater Dumping: The Periyar
-                    River Pollution Crisis.
-                  </h3>
-                  <div className="flex justify-between text-sm text-gray-600">
-                    <span className="flex items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="13"
-                        height="13"
-                        fill="currentColor"
-                        className="mr-1"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                      </svg>
-                      10/10/24
-                    </span>
-                    <span className="flex items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="13"
-                        height="13"
-                        fill="currentColor"
-                        className="mr-1"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                      </svg>
-                      3 minute read
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            {/* Card 3 */}
-            <Link to="/blog/water-crisis-banglore" className="block">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition h-full flex flex-col">
-                <img
-                  className="w-full h-48 object-cover"
-                  src="/assets/images/banglore.jpg"
-                  alt="Water Crisis Bangalore"
-                />
-                <div className="p-4 flex-grow">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Water Crisis in Bangalore: How Water Treatment Solutions Can
-                    Prevent Future Shortages
-                  </h3>
-                  <div className="flex justify-between text-sm text-gray-600">
-                    <span className="flex items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="13"
-                        height="13"
-                        fill="currentColor"
-                        className="mr-1"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                      </svg>
-                      10/10/24
-                    </span>
-                    <span className="flex items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="13"
-                        height="13"
-                        fill="currentColor"
-                        className="mr-1"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                      </svg>
-                      10 minute read
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Link>
-            {/**card 4 */}
-  <Link to="/blog/kakkanad-lessons" className="block">
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition h-full flex flex-col">
-      <img
-        className="w-full h-48 object-cover"
-        src="/assets/images/kakkanad.jpg"
-        alt="ebhoom"
-      />
-      <div className="p-4 flex-grow">
-        <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          Water Treatment Technologies for Residential Complexes: Lessons from Kakkanad Flats
-        </h3>
-        <div className="flex justify-between text-sm text-gray-600 mt-4">
-          <span className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="13"
-              height="13"
-              fill="currentColor"
-              className="mr-1"
-              viewBox="0 0 16 16"
-            >
-              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-            </svg>
-            10/10/24
-          </span>
-          <span className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="13"
-              height="13"
-              fill="currentColor"
-              className="mr-1"
-              viewBox="0 0 16 16"
-            >
-              <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-            </svg>
-            5 minute read
-          </span>
-        </div>
-      </div>
-    </div>
-  </Link>
-  {/**card 5 */}
-
-  <Link to="/blog/waste-management" className="block">
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition h-full flex flex-col">
-      {/* Image Section */}
-      <img
-        className="w-full h-48 object-cover"
-        src="/assets/images/watermanagement.jpg"
-        alt="ebhoom"
-      />
-
-      {/* Content Section */}
-      <div className="p-4 flex-grow flex flex-col">
-        <p className="text-lg font-semibold text-gray-800 mb-3">
-          Efficient Water Treatment Solutions for Industrial Wastewater Management
-        </p>
-        <div className="mt-auto flex justify-between items-center text-sm text-gray-600">
-          {/* Date */}
-          <span className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="mr-1"
-              viewBox="0 0 16 16"
-            >
-              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-            </svg>
-            10/10/24
-          </span>
-
-          {/* Read Time */}
-          <span className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="mr-1"
-              viewBox="0 0 16 16"
-            >
-              <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-            </svg>
-            5 minute read
-          </span>
-        </div>
-      </div>
-    </div>
-  </Link>
-{/**card 6 */}
-<Link to="/blog/couple-recycles-10000-tonnes-of-waste" className="block">
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition h-full flex flex-col">
-      <img
-        className="w-full h-48 object-cover"
-        src="/assets/images/ocems.jpg"
-        alt="ebhoom"
-      />
-      <div className="p-4 flex-grow">
-        <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          A Step-by-Step Guide to Implementing OCEMS in Your Industry
-        </h3>
-      </div>
-      <div className="flex justify-between items-center text-sm text-gray-600 px-4 pb-4">
-        <span className="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            fill="currentColor"
-            className="mr-1"
-            viewBox="0 0 16 16"
-          >
-            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-          </svg>
-          11/10/24
-        </span>
-        <span className="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            fill="currentColor"
-            className="mr-1"
-            viewBox="0 0 16 16"
-          >
-            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-          </svg>
-          3 minute read
-        </span>
-      </div>
-    </div>
-  </Link>
-  {/**card 7*/}
-  <Link to="/blog/ocems" className="block">
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition h-full flex flex-col">
-      <img
-        className="w-full h-48 object-cover"
-        src="/assets/images/ocemsbenefits.jpg"
-        alt="ebhoom"
-      />
-      <div className="p-4 flex-grow">
-        <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          5 Benefits of Installing OCEMS in Manufacturing Plants
-        </h3>
-      </div>
-      <div className="flex justify-between items-center text-sm text-gray-600 px-4 pb-4">
-        <span className="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            fill="currentColor"
-            className="mr-1"
-            viewBox="0 0 16 16"
-          >
-            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-          </svg>
-          11/10/24
-        </span>
-        <span className="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            fill="currentColor"
-            className="mr-1"
-            viewBox="0 0 16 16"
-          >
-            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-          </svg>
-          3 minute read
-        </span>
-      </div>
-    </div>
-  </Link>
-  {/**card 8 */}
-  <Link to="/blog/carbon-tracking" className="block">
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition h-full flex flex-col">
-      <img
-        className="w-full h-48 object-contain"
-        src="/assets/images/carbonfootprint.png"
-        alt="ebhoom"
-      />
-      <div className="p-4 flex-grow">
-        <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          Carbon Emission Tracking: The Key to Reducing Your Industry’s Carbon
-          Footprint
-        </h3>
-      </div>
-      <div className="flex justify-between items-center text-sm text-gray-600 px-4 pb-4">
-        <span className="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            fill="currentColor"
-            className="mr-1"
-            viewBox="0 0 16 16"
-          >
-            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-          </svg>
-          11/10/24
-        </span>
-        <span className="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            fill="currentColor"
-            className="mr-1"
-            viewBox="0 0 16 16"
-          >
-            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-          </svg>
-          5 minute read
-        </span>
-      </div>
-    </div>
-  </Link>
-  {/**card 9 */}
-  <Link to="/blog/carbon-footprint" className="block">
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition h-full flex flex-col">
-      <img
-        className="w-full h-48 object-cover"
-        src="/assets/images/carbonurban.jpg"
-        alt="ebhoom"
-      />
-      <div className="p-4 flex-grow">
-        <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          The Growing Carbon Footprint of Cities: How Urban Areas Can Reduce
-          Emissions
-        </h3>
-      </div>
-      <div className="flex justify-between items-center text-sm text-gray-600 px-4 pb-4">
-        <span className="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            fill="currentColor"
-            className="mr-1"
-            viewBox="0 0 16 16"
-          >
-            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-          </svg>
-          11/10/24
-        </span>
-        <span className="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="13"
-            fill="currentColor"
-            className="mr-1"
-            viewBox="0 0 16 16"
-          >
-            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-          </svg>
-          3 minute read
-        </span>
-      </div>
-    </div>
-  </Link>
+              </Link>
+            ))}
           </div>
+
+          {/* Read More Button */}
+          {visibleCount < blogPosts.length && (
+            <div className="flex justify-center mt-8">
+              <button
+                onClick={handleLoadMore}
+                className="px-6 py-2 bg-gray-700 text-white font-medium rounded-xl hover:bg-gray-800 transition"
+              >
+                Read More
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
