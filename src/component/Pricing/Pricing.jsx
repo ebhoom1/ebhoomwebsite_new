@@ -47,6 +47,32 @@ const SubscriptionPage = () => {
         parameter: "30 parameters",
         instruments: "30 field instruments per facility",
       },
+      {
+        title: "Business Advanced",
+        price: "₹15,000",
+        details: [
+          "Support for SCADA, BMS, DCS, and OT integrations",
+          "Escalation Engine for alerts",
+          "Maintenance mode and data correction workflows",
+          "Dedicated customer success manager",
+        ],
+        users: "5 user per org",
+        parameter: "60 parameters",
+        instruments: "30 field instruments per facility",
+      },
+      {
+        title: "Business Pro",
+        price: "₹20,000",
+        details: [
+          "Support for SCADA, BMS, DCS, and OT integrations",
+          "Escalation Engine for alerts",
+          "Maintenance mode and data correction workflows",
+          "Dedicated customer success manager",
+        ],
+        users: "5 user per org",
+        parameter: "100 parameters",
+        instruments: "30 field instruments per facility",
+      },
     ],
     []
   );
