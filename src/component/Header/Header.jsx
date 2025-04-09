@@ -228,7 +228,7 @@ const Header = () => {
             >
               TPDS
             </NavLink>
-            {/* <NavLink
+            <NavLink
               className={({ isActive }) =>
                 ` ${
                   isActive
@@ -240,12 +240,12 @@ const Header = () => {
                     : "text-gray-700"
                 } font-normal text-[16px]`
               }
-              to="/goodfoot"
+              to="/partner"
               onClick={() => setMenuOpen(false)} // Close menu on click
-
             >
-              Good Foot
-            </NavLink> */}
+              Partner
+            </NavLink>
+           
             <NavLink
               className={({ isActive }) =>
                 ` ${
