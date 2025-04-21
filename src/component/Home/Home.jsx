@@ -17,6 +17,8 @@ import startupmission from "../../assets/images/kerala-startup-mission.svg";
 import "./home.css";
 import { NavLink } from "react-router-dom";
 import SustainabilitySection from "./SustainabilitySection";
+import AssetManagementSection from "./AssetManagementSection";
+
 
 const Home = () => {
   const navigate=useNavigate();
@@ -290,6 +292,10 @@ const Home = () => {
         </div>
        
       </section>
+      
+      <AssetManagementSection />
+
+
       <div className="py-10"></div>
 
       {/**section 3 */}

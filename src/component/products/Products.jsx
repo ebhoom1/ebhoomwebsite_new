@@ -1,4 +1,6 @@
 import React from "react";
+import AssetManagementOverview from "./AssetManagementOverview";
+
 
 const Products = () => {
   const multiparameter = [
@@ -292,7 +294,9 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="py-20 bg-gray-100"></div>
+      <div className="py-10 bg-gray-100"></div>
+      <AssetManagementOverview />
+
 
       <div className="py-10 bg-gray-100">
         <div className="container mx-auto px-6">
