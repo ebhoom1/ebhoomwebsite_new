@@ -35,13 +35,9 @@ const Contact = () => {
             </h3>
             <p className="text-gray-600">
             GoodFoot Sustainability Private Limited <br />
-              Near Bharata Mata College, Thrikkakara P.O, Ernakulam-682021
+           Manjelipadam, Pishari Kovil Rd, Eroor South, Eroor, Kochi, Kerala 682306
             </p>
-            <p className="text-gray-600 mt-4">
-            GoodFoot Sustainability Private Limited <br />
-              CUSAT, RISE TBI, University Road, South Kalamassery, Kochi,
-              Kerala-682022
-            </p>
+            
           </div>
 
           {/* Phone and Email */}

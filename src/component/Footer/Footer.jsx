@@ -30,12 +30,7 @@ const Footer = () => {
                    <div className="text-left max-w-sm">
             <h3 className="font-semibold text-xl mb-2">Contact</h3>
             <p className="text-sm">
-              Near Bharata Mata College, Thrikkakara P.O, Ernakulam - 682021
-            </p>
-            <p className="text-sm">
-              CUSAT, RISE TBI, University Road, South Kalamassery, Kochi, Kerala
-              - 682022
-            </p>
+           Manjelipadam, Pishari Kovil Rd, Eroor South, Eroor, Kochi, Kerala 682306</p>       
           </div>
 
 
