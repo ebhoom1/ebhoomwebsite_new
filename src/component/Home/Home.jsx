@@ -19,9 +19,8 @@ import { NavLink } from "react-router-dom";
 import SustainabilitySection from "./SustainabilitySection";
 import AssetManagementSection from "./AssetManagementSection";
 
-
 const Home = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   // const controls = useAnimation();
   // const [scrollPosition, setScrollPosition] = useState(0);
   // const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has played
@@ -50,9 +49,8 @@ const Home = () => {
       easing: "ease-in-out",
     });
   }, []);
-  
 
-  const logos = [1, 2, 3, 4, 5, 6, 7, 8]; // Replace with your actual number of logos
+  const logos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12,13]; // Replace with your actual number of logos
 
   return (
     <div className="min-h-screen">
@@ -188,8 +186,7 @@ const Home = () => {
                 Together, they do.
               </h4>
               <p className="text-gray-700 text-lg mb-6">
-                We monitor ambient{" "}
-                air, water,energy, noise pollution and
+                We monitor ambient air, water,energy, noise pollution and
                 <br />
                 Interactive monitoring application suits all pollution
                 monitoring devices.
@@ -290,11 +287,9 @@ const Home = () => {
             </Swiper>
           </div>
         </div>
-       
       </section>
-      
-      <AssetManagementSection />
 
+      <AssetManagementSection />
 
       <div className="py-10"></div>
 
@@ -402,24 +397,23 @@ const Home = () => {
       </div>
       {/* Footer CTA Section with Modern Clip Path */}
       <section className=" px-6 md:px-6 lg:px-20">
-
-      <div
-        className="relative mt-20 bg-green-800 text-white py-12 px-6 md:px-12 lg:px-20 flex flex-col items-center justify-center text-center"
-        style={{
-          clipPath:
-            "polygon(0 10%, 25% 5%, 50% 10%, 75% 5%, 100% 10%, 100% 90%, 75% 95%, 50% 90%, 25% 95%, 0 90%)",
-        }}
-      >
-        <h3 className="text-3xl font-bold">
-          The Future is Green. The Future is EBHOOM.
-        </h3>
-        <button
-          onClick={() => navigate("/contact")}
-          className="mt-6 bg-white text-green-700 px-8 py-3 rounded-lg font-medium text-lg hover:bg-green-700 hover:text-white transition shadow-lg"
+        <div
+          className="relative mt-20 bg-green-800 text-white py-12 px-6 md:px-12 lg:px-20 flex flex-col items-center justify-center text-center"
+          style={{
+            clipPath:
+              "polygon(0 10%, 25% 5%, 50% 10%, 75% 5%, 100% 10%, 100% 90%, 75% 95%, 50% 90%, 25% 95%, 0 90%)",
+          }}
         >
-          Join Us
-        </button>
-      </div>
+          <h3 className="text-3xl font-bold">
+            The Future is Green. The Future is EBHOOM.
+          </h3>
+          <button
+            onClick={() => navigate("/contact")}
+            className="mt-6 bg-white text-green-700 px-8 py-3 rounded-lg font-medium text-lg hover:bg-green-700 hover:text-white transition shadow-lg"
+          >
+            Join Us
+          </button>
+        </div>
       </section>
       <div className="py-10"></div>
 
@@ -569,7 +563,7 @@ const Home = () => {
       </section>
 
       <div className="py-10"></div>
-     
+
       {/* Client Section */}
       <section className="py-12 overflow-hidden">
         <div className="container mx-auto px-4">
@@ -588,7 +582,7 @@ const Home = () => {
                 >
                   <img
                     className="w-full h-full object-contain"
-                    src={`assets/clients/${logo}.png`}
+                    src={`/assets/clients/${logo}.png`}
                     alt={`Client ${logo}`}
                     loading="lazy"
                   />
