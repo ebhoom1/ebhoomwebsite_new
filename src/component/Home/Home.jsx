@@ -50,7 +50,7 @@ const Home = () => {
     });
   }, []);
 
-  const logos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12,13]; // Replace with your actual number of logos
+  const logos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]; // Replace with your actual number of logos
 
   return (
     <div className="min-h-screen">
