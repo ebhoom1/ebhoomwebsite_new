@@ -118,8 +118,8 @@ const Contact = () => {
 
         {/* Map Section */}
         <div className="bg-white shadow-md rounded-2xl p-4 mb-16">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.11839610864!2d76.2943523!3d10.0070781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0877bdf5e920ef%3A0xd36270de5dfd79b0!2sEBHOOM%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1663775213665!5m2!1sen!2sin"
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d91.46962427149842!2d76.33248003203677!3d9.965381266823366!2m2!1f0!2f0.036281188158449704!3m2!1i1024!2i768!4f47.57390612402647!3m3!1m2!1s0x3b0877bdf5e920ef%3A0xd36270de5dfd79b0!2sEBHOOM!5e1!3m2!1sen!2sin!4v1749222460830!5m2!1sen!2sin"
             width="100%"
             height="300"
             style={{ border: 0 }}
