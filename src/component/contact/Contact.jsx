@@ -26,7 +26,7 @@ const Contact = () => {
         {/* Contact Details Section */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* Office Address */}
-          <div className="bg-white shadow-md border border-gray-200 rounded-lg p-8 text-center flex flex-col items-center">
+          {/* <div className="bg-white shadow-md border border-gray-200 rounded-lg p-8 text-center flex flex-col items-center">
             <div className="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full mb-4">
               <i className="fas fa-map-marker-alt text-green-500 text-xl"></i>
             </div>
@@ -34,10 +34,37 @@ const Contact = () => {
               Office Address
             </h3>
             <p className="text-gray-600">
-            GoodFoot Sustainability Private Limited <br />
-           Manjelipadam, Pishari Kovil Rd, Eroor South, Eroor, Kochi, Kerala 682306
+              GoodFoot Sustainability Private Limited <br />
+              Manjelipadam, Pishari Kovil Rd, Eroor South, Eroor, Kochi, Kerala
+              682306
             </p>
-            
+          </div> */}
+          {/* Combined Office Addresses */}
+          <div className="bg-white shadow-md border border-gray-200 rounded-lg p-8 text-center flex flex-col items-center">
+            <div className="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full mb-4">
+              <i className="fas fa-map-marker-alt text-green-500 text-xl"></i>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-800 mb-4"> {/* Increased margin-bottom */}
+              Office Addresses
+            </h3>
+            {/* Kochi Office */}
+            <div className="mb-6"> {/* Added margin-bottom to separate addresses */}
+              <h4 className="text-lg font-semibold text-gray-700 mb-1">Kochi Office</h4>
+              <p className="text-gray-600">
+                GoodFoot Sustainability Private Limited <br />
+                Manjelipadam, Pishari Kovil Rd, Eroor South, Eroor, Kochi, Kerala
+                682306
+              </p>
+            </div>
+            {/* Head Office */}
+            <div>
+              <h4 className="text-lg font-semibold text-gray-700 mb-1">Head Office</h4>
+              <p className="text-gray-600">
+                #04, Sahyadri Layout, Shettihalli, <br />
+                Jalahalli West, Bengaluru, <br />
+                Karnataka – 560015
+              </p>
+            </div>
           </div>
 
           {/* Phone and Email */}
@@ -118,7 +145,7 @@ const Contact = () => {
 
         {/* Map Section */}
         <div className="bg-white shadow-md rounded-2xl p-4 mb-16">
-            <iframe
+          <iframe
             src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d91.46962427149842!2d76.33248003203677!3d9.965381266823366!2m2!1f0!2f0.036281188158449704!3m2!1i1024!2i768!4f47.57390612402647!3m3!1m2!1s0x3b0877bdf5e920ef%3A0xd36270de5dfd79b0!2sEBHOOM!5e1!3m2!1sen!2sin!4v1749222460830!5m2!1sen!2sin"
             width="100%"
             height="300"
@@ -144,3 +171,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

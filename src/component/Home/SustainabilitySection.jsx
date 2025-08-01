@@ -51,24 +51,39 @@ const SustainabilitySection = () => {
           <div className="p-6 text-center border-l-4 border-[#236a80]">
             <FaLeaf className="text-[#236a80] text-3xl mx-auto" />
             <h4 className="text-xl sm:text-xl font-semibold mt-4 text-[#236a80] flex items-center justify-center flex-wrap text-center">
-  <img src={goodfootlogo1} alt="GoodFoot Logo" className="h-8 sm:h-8 mr-2" />
-  <span className="whitespace-nowrap">:</span><span className="whitespace-nowrap">Sustainability, Simplified.</span>
-</h4>
+              <img
+                src={goodfootlogo1}
+                alt="GoodFoot Logo"
+                className="h-8 sm:h-8 mr-2"
+              />
+              <span className="whitespace-nowrap">:</span>
+              <span className="whitespace-nowrap">
+                Sustainability, Simplified.
+              </span>
+            </h4>
 
             <p className="text-gray-700 mt-2">
               Track your carbon footprint, join AI-verified eco-challenges, rent
               EVs, shop in our eco-friendly marketplace, and earn rewards for
               making a difference. One app. Infinite impact.
             </p>
-            <Link
-              to="/goodfoot"
+            {/* <Link
+              to="www.goodfoot.in"
               className="mt-4 inline-block bg-[#236a80] text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition"
             >
               Discover GoodFoot
-            </Link>
+            </Link> */}
+            <a
+              href="https://www.goodfoot.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block bg-[#236a80] text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition"
+            >
+              Discover GoodFoot
+            </a>
           </div>
         </div>
-      </div>    
+      </div>
     </section>
   );
 };

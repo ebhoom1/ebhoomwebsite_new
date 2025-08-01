@@ -14,6 +14,7 @@ import mobileapp from "../../assets/images/mobile app.png";
 import background_sec4 from "../../assets/images/background_sec4.jpg";
 import startupindia from "../../assets/images/Startup India.svg";
 import startupmission from "../../assets/images/kerala-startup-mission.svg";
+import googlestartup from "../../assets/images/googlestartup.png";
 import "./home.css";
 import { NavLink } from "react-router-dom";
 import SustainabilitySection from "./SustainabilitySection";
@@ -50,7 +51,7 @@ const Home = () => {
     });
   }, []);
 
-  const logos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12,13]; // Replace with your actual number of logos
+  const logos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14,15,16]; // Replace with your actual number of logos
 
   return (
     <div className="min-h-screen">
@@ -492,7 +493,8 @@ const Home = () => {
                 Proud Member of
               </h3>
               {/* Logo Grid */}
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center">
+              {/* <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center"> */}
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-8 max-w-sm mx-auto">
                 <div className="bg-white w-28 h-28 sm:w-32 sm:h-32 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center">
                   <img
                     src={startupindia}
@@ -503,6 +505,13 @@ const Home = () => {
                 <div className="bg-white w-28 h-28 sm:w-32 sm:h-32 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center">
                   <img
                     src={startupmission}
+                    alt="Kerala Startup Mission"
+                    className="w-20 h-20 sm:w-24 sm:h-24 object-cover"
+                  />
+                </div>
+                <div className="bg-white w-28 h-28 sm:w-32 sm:h-32 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center">
+                  <img
+                    src={googlestartup}
                     alt="Kerala Startup Mission"
                     className="w-20 h-20 sm:w-24 sm:h-24 object-cover"
                   />

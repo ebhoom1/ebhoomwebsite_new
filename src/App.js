@@ -31,6 +31,8 @@ import BlogContent8 from "./component/Blog/BlogContent8";
 import BlogContent9 from "./component/Blog/BlogContent9";
 import BlogContent10 from "./component/Blog/BlogContent10";
 import BlogContent11 from "./component/Blog/BlogContent11";
+import BlogContent12 from "./component/Blog/BlogContent12";
+import BlogContent13 from "./component/Blog/BlogContent13";
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000,once:true, });
@@ -54,7 +56,7 @@ function App() {
           <Route path="/subscriptionform" element={<Subscription />} />
           <Route path="/services" element={<Services />} />
           <Route path="/esg" element={<ESG />} />
-          <Route path="/goodfoot" element={<GoodFoot />} />
+          {/* <Route path="/goodfoot" element={<GoodFoot />} /> */}
           <Route path="/pricing" element={<SubscriptionPage />} />
           <Route path="/partner" element={<PartnerPage />} />
 
@@ -71,6 +73,8 @@ function App() {
           <Route path="/blog/carbon-footprint" element={<BlogContent9 />} />
           <Route path="/blog/esg" element={<BlogContent10 />} />
           <Route path="/blog/carbon-emission" element={<BlogContent11 />} />
+          <Route path="/blog/esg-blueprint" element={<BlogContent12 />} />
+          <Route path="/blog/esg-leader-playbook" element={<BlogContent13 />} />
         </Routes>
       </div>
       <Footer />

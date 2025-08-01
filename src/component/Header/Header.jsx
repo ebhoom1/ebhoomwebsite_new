@@ -246,7 +246,7 @@ const Header = () => {
               Partner
             </NavLink>
            
-            <NavLink
+            {/* <NavLink
               className={({ isActive }) =>
                 ` ${
                   isScrolled
@@ -257,11 +257,10 @@ const Header = () => {
                 } font-normal text-[16px]`
               }
               to="/goodfoot"
-              onClick={() => setMenuOpen(false)} // Close menu on click
+              onClick={() => setMenuOpen(false)} 
             >
               {({ isActive }) => (
                 <img
-                  // src={isActive ? goodfootlogo3 : isScrolled ? goodfootlogo2 : goodfootlogo1}
                   src={
                     isActive
                       ? isScrolled
@@ -275,7 +274,7 @@ const Header = () => {
                   className="h-6 w-auto"
                 />
               )}
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
               className={({ isActive }) =>
