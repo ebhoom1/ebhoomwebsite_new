@@ -22,26 +22,7 @@ import AssetManagementSection from "./AssetManagementSection";
 
 const Home = () => {
   const navigate = useNavigate();
-  // const controls = useAnimation();
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has played
-
-  // const handleScroll = () => {
-  //   const position = window.scrollY;
-  //   setScrollPosition(position);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
-  // useEffect(() => {
-  //   if (!hasAnimated && scrollPosition > 300) {
-  //     controls.start({ y: 0, opacity: 1 });
-  //     setHasAnimated(true); // Prevent re-triggering
-  //   }
-  // }, [scrollPosition, controls, hasAnimated]);
+  
 
   useEffect(() => {
     AOS.init({

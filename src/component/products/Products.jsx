@@ -1,6 +1,6 @@
 import React from "react";
 import AssetManagementOverview from "./AssetManagementOverview";
-
+import Autonerve from "./Autonerve";
 
 const Products = () => {
   const multiparameter = [
@@ -129,7 +129,7 @@ const Products = () => {
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
           >
-            <circle
+             <circle
               cx="20%"
               cy="20%"
               r="100"
@@ -174,7 +174,7 @@ const Products = () => {
               Already using our product?{" "}
             </p>
             <a
-              href="https://admin.ebhoom.com"
+              href="https://ems.ebhoom.com"
               target="__blank"
               className="bg-green-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-green-600 transition duration-300"
             >
@@ -183,7 +183,8 @@ const Products = () => {
           </div>
         </div>
       </div>
-
+{/* Autonerve Component */}
+      <Autonerve />
       {/* Feature section */}
       <div className="relative max-w-7xl mx-auto py-10 px-4">
         {/* Heading */}
