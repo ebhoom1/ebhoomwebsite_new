@@ -1,7 +1,7 @@
 // src/components/Autonerve.jsx
 
 import React from "react";
-import AutonerveImage from "../../assets/images/autonerve.jpeg"; // Adjust path as needed
+import AutonerveImage from "../../assets/images/autonerve.png"; // Adjust path as needed
 
 const Autonerve = () => {
   const coreCapabilities = [
