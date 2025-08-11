@@ -384,8 +384,7 @@ const Autonerve = () => {
           ))}
         </div>
       </div>
-      
-     
+
       {/* Technical Specs & FAQ Section */}
       <div className="bg-gray-100 dark:bg-gray-800 py-16 lg:py-24 -mb-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -459,3 +458,4 @@ const Autonerve = () => {
 };
 
 export default Autonerve;
+

@@ -184,7 +184,7 @@ const Products = () => {
         </div>
       </div>
 {/* Autonerve Component */}
-      <Autonerve />
+      {/* <Autonerve /> */}
       {/* Feature section */}
       <div className="relative max-w-7xl mx-auto py-10 px-4">
         {/* Heading */}
