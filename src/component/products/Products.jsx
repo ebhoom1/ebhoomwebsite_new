@@ -1,5 +1,6 @@
 import React from "react";
 import AssetManagementOverview from "./AssetManagementOverview";
+import RainSensing from "./RainSensing";
 import Autonerve from "./Autonerve";
 
 const Products = () => {
@@ -129,7 +130,7 @@ const Products = () => {
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
           >
-             <circle
+            <circle
               cx="20%"
               cy="20%"
               r="100"
@@ -183,9 +184,12 @@ const Products = () => {
           </div>
         </div>
       </div>
-{/* Autonerve Component */}
-      {/* <Autonerve /> */}
-      {/* Feature section */}
+      {/* Autonerve Component */}
+      <Autonerve />
+ {/* <div className="py-10 bg-gray-100"></div>
+      <RainSensing/>      */}
+      
+       {/* Feature section */}
       <div className="relative max-w-7xl mx-auto py-10 px-4">
         {/* Heading */}
         <div className="text-center mb-8">
@@ -295,9 +299,9 @@ const Products = () => {
         </div>
       </div>
 
+     
       <div className="py-10 bg-gray-100"></div>
       <AssetManagementOverview />
-
 
       <div className="py-10 bg-gray-100">
         <div className="container mx-auto px-6">
@@ -691,7 +695,7 @@ const Products = () => {
               />
             </div>
             {/* Table: Right */}
-            <div className="w-full md:w-1/2" >
+            <div className="w-full md:w-1/2">
               <table className="w-full border-collapse border border-gray-300 rounded-lg shadow-md">
                 <thead>
                   <tr className="bg-gray-200 text-left text-gray-800">
@@ -727,7 +731,7 @@ const Products = () => {
           </div>
           <div className="flex flex-wrap md:flex-nowrap items-center gap-8">
             {/* Table: Left */}
-            <div className="w-full md:w-1/2" >
+            <div className="w-full md:w-1/2">
               <table className="w-full border-collapse border border-gray-300 rounded-lg shadow-md">
                 <thead>
                   <tr className="bg-gray-200 text-left text-gray-800">
@@ -777,7 +781,7 @@ const Products = () => {
               />
             </div>
             {/* Table: Right */}
-            <div className="w-full md:w-1/2" >
+            <div className="w-full md:w-1/2">
               <table className="w-full border-collapse border border-gray-300 rounded-lg shadow-md">
                 <thead>
                   <tr className="bg-gray-200 text-left text-gray-800">
@@ -845,10 +849,7 @@ const Products = () => {
         {/* Content Section */}
         <div className="flex justify-center">
           {/* Instruction List */}
-          <div
-            className="w-full md:w-2/3 lg:w-1/2 bg-indigo p-6 rounded-lg shadow-lg bg-indigo-100"
-           
-          >
+          <div className="w-full md:w-2/3 lg:w-1/2 bg-indigo p-6 rounded-lg shadow-lg bg-indigo-100">
             <ol className="space-y-4 text-gray-700 text-base leading-relaxed">
               <li className="flex items-start space-x-2">
                 <span>✔️</span>
