@@ -495,7 +495,7 @@ const Services = () => {
           <div className="row gap-4 text-yellow-500" data-aos="zoom-out">
             <div className="accordion">
               <div className="accordion-item bg-white shadow-md rounded-md mb-4">
-                <div className="accordion-item-header p-4 font-semibold text-lg cursor-pointer">
+                <div className="accordion-item-header p-4 font-semibold text-lg ">
                   Steps
                 </div>
                 <div className="accordion-item-body max-h-0 overflow-hidden transition-all duration-300">
@@ -559,7 +559,7 @@ const Services = () => {
               <div className="accordion">
                 {/* Accordion Item */}
                 <div className="accordion-item bg-white rounded-lg shadow-md mb-4">
-                  <div className="accordion-item-header p-4 font-semibold cursor-pointer">
+                  <div className="accordion-item-header p-4 font-semibold ">
                     Steps
                   </div>
                   <div className="accordion-item-body max-h-0 overflow-hidden transition-all duration-300">
@@ -656,7 +656,7 @@ const Services = () => {
         {/**step 3 start */}
         <div className="container mx-auto px-4 py-10">
           <div className="accordion-item bg-white shadow-md rounded-md mb-4 px-4">
-            <div className="accordion-item-header p-4 font-semibold text-lg cursor-pointer">
+            <div className="accordion-item-header p-4 font-semibold text-lg ">
               Process of Routine Calibration Library Generation
             </div>
             <div className="accordion-item-body max-h-0 overflow-hidden transition-all duration-300">

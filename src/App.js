@@ -40,7 +40,7 @@ function App() {
   return (
     <>
 
-      <div className="App flex flex-col min-h-screen">
+      <div className="App flex flex-col min-h-screen" >
         <Header />
         <div className="content flex-grow   ">
           <ScrollToTop />

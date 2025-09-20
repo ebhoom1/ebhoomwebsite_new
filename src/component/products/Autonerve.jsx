@@ -149,6 +149,7 @@ const Autonerve = () => {
   ];
 
   return (
+     <div className="dark"> 
     <div className="bg-gray-50 dark:bg-gray-900 py-16 lg:py-25 mt-60">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-green-500 to-blue-600 dark:from-green-700 dark:to-blue-900 overflow-hidden shadow-2xl rounded-3xl mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-24 -mt-60">
@@ -186,7 +187,7 @@ const Autonerve = () => {
             <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
               <a
                 onClick={() => (window.location.href = "tel:+916282386462")}
-                className="bg-white text-blue-600 dark:bg-gray-800 dark:text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-gray-600 transition duration-300 transform hover:scale-105 cursor-pointer"
+                className="bg-white text-blue-600 dark:bg-gray-800 dark:text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:bg-gray-600 transition duration-300 transform hover:scale-105 "
               >
                 Book a Live Demo
               </a>
@@ -424,7 +425,7 @@ const Autonerve = () => {
                 {faqs.map((faq, index) => (
                   <details
                     key={index}
-                    className="group rounded-lg bg-white dark:bg-gray-900 shadow-md p-6 cursor-pointer"
+                    className="group rounded-lg bg-white dark:bg-gray-900 shadow-md p-6 "
                   >
                     <summary className="flex justify-between items-center font-semibold text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-green-600 dark:group-hover:text-green-400">
                       {faq.question}
@@ -453,6 +454,7 @@ const Autonerve = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

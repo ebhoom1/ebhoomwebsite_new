@@ -2,6 +2,7 @@ import React from "react";
 import AssetManagementOverview from "./AssetManagementOverview";
 import RainSensing from "./RainSensing";
 import Autonerve from "./Autonerve";
+import Generator from "./Generator";
 
 const Products = () => {
   const multiparameter = [
@@ -186,8 +187,11 @@ const Products = () => {
       </div>
       {/* Autonerve Component */}
       <Autonerve />
- {/* <div className="py-10 bg-gray-100"></div>
-      <RainSensing/>      */}
+ {/* <div className="py-10 "></div> */}
+      <RainSensing/> 
+
+      <Generator/>
+
       
        {/* Feature section */}
       <div className="relative max-w-7xl mx-auto py-10 px-4">
@@ -682,7 +686,7 @@ const Products = () => {
           <div className="flex flex-wrap md:flex-nowrap items-center gap-8">
             {/* Image: Left */}
             <div
-              className="w-full md:w-1/2 cursor-pointer transform duration-300"
+              className="w-full md:w-1/2  transform duration-300"
               style={{
                 transform: "perspective(400px) rotateY(20deg)",
               }}

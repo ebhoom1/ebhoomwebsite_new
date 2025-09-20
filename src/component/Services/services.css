@@ -104,7 +104,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
   .accordion-item-header::after {
     content: "\002B";
