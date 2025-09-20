@@ -140,11 +140,11 @@ const RainSensing = () => {
               <div className="flex justify-center relative">
                 <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
                 <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
-                <img
-                  src="/assets/images/rainsensing.jpeg"
+                {/* <img
+                  src="/assets/images/rainsensing.png"
                   alt="Rain Sensing Gauge"
                   className="relative w-full max-w-md rounded-lg shadow-2xl"
-                />
+                /> */}
               </div>
 
               {/* Text Section */}
