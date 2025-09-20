@@ -218,7 +218,7 @@ const Generator = () => {
         <div className="mt-12 flex justify-center">
           <div className="relative rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(0,200,255,0.4)]">
             <img
-              src="/assets/images/dg-dashboard.jpeg"
+              src="/assets/images/dg-dashboard.png"
               alt="DG Dashboard"
               className="rounded-2xl w-full max-w-4xl border border-gray-700"
             />
@@ -290,7 +290,7 @@ const Generator = () => {
         {/* Generator Image Section */}
         <div className="flex flex-col items-center bg-gradient-to-br from-[#0e2f3a] to-[#0a1e27] rounded-2xl p-8 shadow-xl border border-gray-700">
           <img
-            src="/assets/images/diesel-generator.jpeg"
+            src="/assets/images/diesel-generator.png"
             alt="Diesel Generator"
             className="w-full max-w-md drop-shadow-[0_0_30px_rgba(0,200,255,0.4)] rounded-lg"
           />
